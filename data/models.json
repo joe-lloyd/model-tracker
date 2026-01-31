@@ -899,5 +899,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894680/mini-vault/ig4lbwimsx08w45bwpfv.jpg"
     ]
+  },
+  {
+    "id": "6b78dc53-13cf-4260-9201-d9245a483be2",
+    "createdAt": "2026-01-31T21:26:03.751Z",
+    "name": "Elven Prince on Dragon",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "HQ"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894762/mini-vault/ymofao79tm9eu5czvnez.jpg"
+    ]
   }
 ]
