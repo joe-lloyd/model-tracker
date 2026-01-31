@@ -1,0 +1,162 @@
+import { useEffect, useState } from "react";
+import { type Model } from "@mini-vault/shared";
+import { Loader2, Plus, Search } from "lucide-react";
+import { Button } from "./ui";
+
+export function ModelList({ onAddNew }: { onAddNew: () => void }) {
+  const [models, setModels] = useState<Model[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchModels() {
+      try {
+        const res = await fetch("/.netlify/functions/get-models");
+
+        if (!res.ok) {
+          const text = await res.text();
+          throw new Error(`Status ${res.status}: ${text}`);
+        }
+
+        const data = await res.json();
+        // Sort by newest first
+        const sorted = Array.isArray(data)
+          ? data.sort(
+              (a, b) =>
+                new Date(b.createdAt).getTime() -
+                new Date(a.createdAt).getTime(),
+            )
+          : [];
+        setModels(sorted);
+      } catch (err: any) {
+        console.error("Fetch error:", err);
+        setError(err.message || "Unknown error occurred");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchModels();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
+        <Loader2 className="w-8 h-8 animate-spin mb-4" />
+        <p>Loading collection...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex flex-col items-center justify-center py-12 text-destructive">
+        <p>Error: {error}</p>
+        <Button
+          onClick={() => window.location.reload()}
+          variant="outline"
+          className="mt-4"
+        >
+          Retry
+        </Button>
+      </div>
+    );
+  }
+
+  if (models.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center py-12 text-center">
+        <div className="bg-muted/30 p-6 rounded-full mb-4">
+          <Search className="w-8 h-8 text-muted-foreground" />
+        </div>
+        <h3 className="text-lg font-semibold mb-2">No models yet</h3>
+        <p className="text-muted-foreground mb-6 max-w-xs">
+          Your vault is empty. Add your first miniature to start tracking!
+        </p>
+        <Button onClick={onAddNew}>
+          <Plus className="w-4 h-4 mr-2" />
+          Add Logic
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {models.map((model) => (
+          <div
+            key={model.id}
+            className="group relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow"
+          >
+            {/* Image Aspect Ratio */}
+            <div className="aspect-square w-full overflow-hidden bg-muted relative">
+              {model.images && model.images.length > 0 ? (
+                <img
+                  src={model.images[0]}
+                  alt={model.name}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center text-muted-foreground bg-muted/50">
+                  No Image
+                </div>
+              )}
+
+              {/* Count Badge */}
+              {model.count > 1 && (
+                <span className="absolute top-2 right-2 bg-black/75 text-white text-xs font-bold px-2 py-1 rounded-full">
+                  x{model.count}
+                </span>
+              )}
+            </div>
+
+            <div className="p-4 space-y-2">
+              <div className="flex justify-between items-start gap-2">
+                <h3 className="font-semibold tracking-tight line-clamp-1">
+                  {model.name}
+                </h3>
+              </div>
+
+              <div className="flex flex-wrap gap-1 text-xs text-muted-foreground">
+                <span className="bg-muted px-1.5 py-0.5 rounded">
+                  {model.system}
+                </span>
+                <span className="bg-muted px-1.5 py-0.5 rounded">
+                  {model.faction}
+                </span>
+              </div>
+
+              {/* Status Indicators */}
+              <div className="flex gap-1 pt-2">
+                {model.painted && (
+                  <div
+                    className="w-2 h-2 rounded-full bg-green-500"
+                    title="Painted"
+                  />
+                )}
+                {model.assembled && (
+                  <div
+                    className="w-2 h-2 rounded-full bg-blue-500"
+                    title="Assembled"
+                  />
+                )}
+                {model.primed && (
+                  <div
+                    className="w-2 h-2 rounded-full bg-gray-500"
+                    title="Primed"
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="pt-8 text-center text-xs text-muted-foreground">
+        {models.length} model{models.length !== 1 && "s"} in vault
+      </div>
+    </div>
+  );
+}

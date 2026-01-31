@@ -4,7 +4,7 @@
   functions = "functions"
 
 [dev]
-  command = "pnpm dev"
+  command = "turbo run dev --filter web"
   framework = "#auto"
   publish = "apps/web/dist"
 
@@ -12,3 +12,6 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[functions]
+  node_bundler = "esbuild"

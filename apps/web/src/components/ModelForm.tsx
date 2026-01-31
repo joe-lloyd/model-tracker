@@ -15,7 +15,9 @@ import { ImageUpload } from "./ImageUpload";
 import { Input, Button, Label, Textarea } from "./ui";
 import { uploadToCloudinary } from "@/lib/cloudinary";
 
-export function ModelForm() {
+// Custom mode state
+// Add onSuccess to props
+export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formFiles, setFormFiles] = useState<File[]>([]);
 
@@ -23,7 +25,6 @@ export function ModelForm() {
   const [isCustomSystem, setIsCustomSystem] = useState(false);
   const [isCustomFaction, setIsCustomFaction] = useState(false);
   const [isCustomManufacturer, setIsCustomManufacturer] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -143,6 +144,8 @@ export function ModelForm() {
       setIsCustomFaction(false);
       setIsCustomManufacturer(false);
       localStorage.removeItem("model-tracker-form"); // Clear saved state on success
+
+      if (onSuccess) onSuccess(); // Navigate back to list
     } catch (error: any) {
       console.error(error);
       alert(`Submission failed: ${error.message}`);

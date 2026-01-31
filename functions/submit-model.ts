@@ -6,6 +6,8 @@ import { randomUUID } from "crypto";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = process.env.GITHUB_REPO; // format: "owner/repo"
 
+const MAX_RETRIES = 3;
+
 export const handler: Handler = async (event: HandlerEvent) => {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -34,67 +36,78 @@ export const handler: Handler = async (event: HandlerEvent) => {
     }
 
     const newModelInput = parseResult.data;
-
-    // 2. Initialize Octokit
     const octokit = new Octokit({ auth: GITHUB_TOKEN });
     const PATH = "data/models.json";
 
-    // 3. Get existing file (to append)
-    let sha: string | undefined;
-    let existingData: Model[] = [];
+    // 2. Retry Logic for 409 Conflict
+    for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+      try {
+        // Fetch existing file
+        let sha: string | undefined;
+        let existingData: Model[] = [];
 
-    try {
-      const { data } = await octokit.request(
-        "GET /repos/{owner}/{repo}/contents/{path}",
-        {
+        try {
+          const { data } = await octokit.request(
+            "GET /repos/{owner}/{repo}/contents/{path}",
+            { owner, repo, path: PATH },
+          );
+
+          if (!Array.isArray(data) && data.type === "file" && data.content) {
+            sha = data.sha;
+            const decodedContent = Buffer.from(data.content, "base64").toString(
+              "utf-8",
+            );
+            existingData = JSON.parse(decodedContent);
+          }
+        } catch (error: any) {
+          if (error.status !== 404) throw error;
+          // If 404, we just create new file, sha remains undefined
+        }
+
+        // Create new Model object
+        const newModel: Model = {
+          id: randomUUID(),
+          createdAt: new Date().toISOString(),
+          ...newModelInput,
+        };
+
+        const updatedData = [...existingData, newModel];
+
+        // Commit back to GitHub
+        const newContentBase64 = Buffer.from(
+          JSON.stringify(updatedData, null, 2),
+        ).toString("base64");
+
+        await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
           owner,
           repo,
           path: PATH,
-        },
-      );
+          message: `Add model: ${newModel.name}`,
+          content: newContentBase64,
+          sha, // Optimistic locking
+        });
 
-      if (!Array.isArray(data) && data.type === "file" && data.content) {
-        sha = data.sha;
-        const decodedContent = Buffer.from(data.content, "base64").toString(
-          "utf-8",
-        );
-        existingData = JSON.parse(decodedContent);
-      }
-    } catch (error: any) {
-      if (error.status === 404) {
-        // File doesn't exist yet, we'll create it
-        console.log("models.json not found, creating new.");
-      } else {
-        throw error;
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ success: true, model: newModel }),
+        };
+      } catch (error: any) {
+        // If 409 Conflict, retry loop will continue
+        if (error.status === 409) {
+          console.warn(
+            `Conflict detected (attempt ${attempt + 1}). Retrying...`,
+          );
+          continue;
+        }
+        throw error; // Other errors abort immediately
       }
     }
 
-    // 4. Create new Model object
-    const newModel: Model = {
-      id: randomUUID(),
-      createdAt: new Date().toISOString(),
-      ...newModelInput,
-    };
-
-    const updatedData = [...existingData, newModel];
-
-    // 5. Commit back to GitHub
-    const newContentBase64 = Buffer.from(
-      JSON.stringify(updatedData, null, 2),
-    ).toString("base64");
-
-    await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-      owner,
-      repo,
-      path: PATH,
-      message: `Add model: ${newModel.name}`,
-      content: newContentBase64,
-      sha, // Required if updating
-    });
-
     return {
-      statusCode: 200,
-      body: JSON.stringify({ success: true, model: newModel }),
+      statusCode: 409,
+      body: JSON.stringify({
+        error: "High concurrency - failed to update after retries",
+      }),
     };
   } catch (error: any) {
     console.error("Function Error:", error);
