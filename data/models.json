@@ -694,5 +694,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889822/mini-vault/bvmpswpwunorfkomudwg.jpg"
     ]
+  },
+  {
+    "id": "0e75de08-a2c2-4e0d-880a-89514c8befdd",
+    "createdAt": "2026-01-31T20:04:46.610Z",
+    "name": "Ork Tank",
+    "system": "OPR",
+    "faction": "Orks",
+    "manufacturer": "MyDad",
+    "tags": [
+      "Vehicle"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889885/mini-vault/c5czomuzenhabo3u22io.jpg"
+    ]
   }
 ]
