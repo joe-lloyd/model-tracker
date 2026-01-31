@@ -919,5 +919,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894762/mini-vault/ymofao79tm9eu5czvnez.jpg"
     ]
+  },
+  {
+    "id": "4998e630-8811-4c34-8b23-f05e24170511",
+    "createdAt": "2026-01-31T21:27:59.035Z",
+    "name": "Elven Wyvern Rider ",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894877/mini-vault/q17p1bhrgk3a470ltrhv.jpg"
+    ]
   }
 ]
