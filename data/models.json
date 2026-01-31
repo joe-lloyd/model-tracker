@@ -574,5 +574,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888757/mini-vault/xaoyqthlwzbx8fvljbwg.jpg"
     ]
+  },
+  {
+    "id": "e78bb569-005d-4efa-87bd-f60d0dc08507",
+    "createdAt": "2026-01-31T19:46:50.339Z",
+    "name": "Old school pain boy",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888808/mini-vault/oq9b6oz8y3tggsrmcod1.jpg"
+    ]
   }
 ]
