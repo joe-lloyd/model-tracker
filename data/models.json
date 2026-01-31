@@ -122,5 +122,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885401/mini-vault/kvlmn6gxiav2nsofexrm.jpg"
     ]
+  },
+  {
+    "id": "c9dc26cd-1ed9-455b-b51e-eba38328557c",
+    "createdAt": "2026-01-31T18:52:07.162Z",
+    "name": "Ork Trukk",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Vehicle",
+      "Plastic Crack"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885526/mini-vault/vdymfnwmzapvynd8kgmr.jpg"
+    ]
   }
 ]
