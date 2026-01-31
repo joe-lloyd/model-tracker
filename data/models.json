@@ -956,10 +956,11 @@
     "assembled": false,
     "primed": false,
     "based": false,
-    "notes": "",
+    "notes": "I have the wing in a box somewhere ",
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894973/mini-vault/kvzcn3tutaxxtwuekagw.jpg"
-    ]
+    ],
+    "forSale": true
   },
   {
     "id": "5c5c8716-9755-4a60-838d-861946f97568",
