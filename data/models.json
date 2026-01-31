@@ -795,5 +795,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893897/mini-vault/toijj9pvfbdby9cdki9j.jpg"
     ]
+  },
+  {
+    "id": "e9371a6c-f846-41b1-ab49-02f087c1bc2f",
+    "createdAt": "2026-01-31T21:12:35.651Z",
+    "name": "Elven Prince",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "HQ"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893954/mini-vault/rmsjqztb1tpfnqygmgni.jpg"
+    ]
   }
 ]
