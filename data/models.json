@@ -39,5 +39,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769881308/mini-vault/nnlp56pmkj4bjijzlmei.jpg"
     ]
+  },
+  {
+    "id": "4dd2f7cc-a906-4b08-8ee0-b19bf3007aab",
+    "createdAt": "2026-01-31T17:48:36.210Z",
+    "name": "Bretonian team ",
+    "system": "Blood Bowl",
+    "faction": "Human",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Plastic Crack",
+      "Gift"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769881714/mini-vault/u1vs5rakzljefa0zy3wx.jpg"
+    ]
   }
 ]
