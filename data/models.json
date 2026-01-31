@@ -183,5 +183,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885725/mini-vault/bpeil0jze4dwr45diufg.jpg"
     ]
+  },
+  {
+    "id": "a25e41a8-ae75-4973-a4d0-4493c70b52bb",
+    "createdAt": "2026-01-31T18:56:27.674Z",
+    "name": "Killer Kan old school",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Vehicle",
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885786/mini-vault/dhuerfvlh4wxqidiat95.jpg"
+    ]
   }
 ]
