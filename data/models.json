@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "8f7603f6-1c24-474f-82b0-2bc18c1ec2b7",
+    "createdAt": "2026-01-31T15:59:30.622Z",
+    "name": "Elf",
+    "system": "D&D / RPG",
+    "faction": "Elves",
+    "manufacturer": "Other",
+    "tags": [
+      "HQ",
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "Note",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769875168/mini-vault/unnrirnrowvqbpv64cyp.jpg"
+    ]
+  }
+]
