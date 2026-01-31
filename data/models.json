@@ -492,5 +492,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888258/mini-vault/s7eakdg95a0f0gdjowom.jpg"
     ]
+  },
+  {
+    "id": "d4a8ee3d-f4cc-43a7-ab08-16a41c8914e1",
+    "createdAt": "2026-01-31T19:39:03.371Z",
+    "name": "Stompper",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Vehicle",
+      "Plastic Crack"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888342/mini-vault/lwuog1drimv4kvqizaw2.jpg"
+    ]
   }
 ]
