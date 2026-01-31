@@ -756,5 +756,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769890336/mini-vault/flmjecp0xuwcsjkaffm5.jpg"
     ]
+  },
+  {
+    "id": "2382b720-f93b-4335-8fd7-3b0b1fe98282",
+    "createdAt": "2026-01-31T21:06:16.049Z",
+    "name": "Elven Spearmen",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Battleline",
+      "Plastic Crack"
+    ],
+    "count": 105,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893573/mini-vault/kli9iihqu0fp6fhz8elu.jpg"
+    ]
   }
 ]
