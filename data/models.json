@@ -791,10 +791,11 @@
     "assembled": false,
     "primed": false,
     "based": false,
-    "notes": "",
+    "notes": "I have the weapons for these guys in my bits box ",
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893897/mini-vault/toijj9pvfbdby9cdki9j.jpg"
-    ]
+    ],
+    "forSale": true
   },
   {
     "id": "e9371a6c-f846-41b1-ab49-02f087c1bc2f",
