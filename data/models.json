@@ -878,5 +878,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894458/mini-vault/b7jk83nttoeulcvxwskf.jpg"
     ]
+  },
+  {
+    "id": "692c93e0-7cc5-411b-bda6-36b3e37c3d98",
+    "createdAt": "2026-01-31T21:24:41.971Z",
+    "name": "Elven Prince on Drgon",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "HQ",
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894680/mini-vault/ig4lbwimsx08w45bwpfv.jpg"
+    ]
   }
 ]
