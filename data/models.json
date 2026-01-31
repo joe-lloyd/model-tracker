@@ -534,5 +534,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888600/mini-vault/tg3u712pm2wjn288ik1t.jpg"
     ]
+  },
+  {
+    "id": "9aff3ed3-0e4b-43d5-b088-f5c21ee8a94c",
+    "createdAt": "2026-01-31T19:45:06.010Z",
+    "name": "Space Ork",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 3,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888704/mini-vault/tthq6w6zcy5vi48xezqz.jpg"
+    ]
   }
 ]
