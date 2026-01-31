@@ -81,5 +81,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769884932/mini-vault/knhswmdt0oscakahqnds.jpg"
     ]
+  },
+  {
+    "id": "cd5b985c-e526-4add-a666-8b72bed7aa4c",
+    "createdAt": "2026-01-31T18:44:17.275Z",
+    "name": "Printed War Truk",
+    "system": "OPR",
+    "faction": "Orks",
+    "manufacturer": "Other",
+    "tags": [
+      "Print"
+    ],
+    "count": 2,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885054/mini-vault/lnbgohxzauwqjthkeem8.jpg"
+    ]
   }
 ]
