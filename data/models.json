@@ -674,5 +674,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889488/mini-vault/u3xerxaahvwfh9p8qvoc.jpg"
     ]
+  },
+  {
+    "id": "e6477700-8b79-4e65-8a1d-06a6815bc03c",
+    "createdAt": "2026-01-31T20:03:43.844Z",
+    "name": "Ork Trike ",
+    "system": "OPR",
+    "faction": "Orks",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Vehicle"
+    ],
+    "count": 2,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889822/mini-vault/bvmpswpwunorfkomudwg.jpg"
+    ]
   }
 ]
