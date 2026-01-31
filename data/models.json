@@ -714,5 +714,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889885/mini-vault/c5czomuzenhabo3u22io.jpg"
     ]
+  },
+  {
+    "id": "afc2ae75-37e5-4c96-9679-4e57c29c6bd1",
+    "createdAt": "2026-01-31T20:09:46.380Z",
+    "name": "Boys on sprew",
+    "system": "OPR",
+    "faction": "Orks",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Battleline",
+      "Plastic Crack"
+    ],
+    "count": 54,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "notes": "18 sprews with 3 orks on each",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769890184/mini-vault/awdsd38fjlcpokfg7dbm.jpg"
+    ]
   }
 ]
