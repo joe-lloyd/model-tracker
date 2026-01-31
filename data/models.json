@@ -634,5 +634,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889235/mini-vault/harwckxcw3wrmncybeot.jpg"
     ]
+  },
+  {
+    "id": "d56d00ac-b8ea-4b85-b244-026b60844d65",
+    "createdAt": "2026-01-31T19:56:26.741Z",
+    "name": "Old school Nobz",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 5,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889385/mini-vault/evdkm54mggzs6devsn0e.jpg"
+    ]
   }
 ]
