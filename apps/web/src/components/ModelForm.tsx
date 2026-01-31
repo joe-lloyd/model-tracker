@@ -4,27 +4,40 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   ModelInputSchema,
   type ModelInput,
+  type Model,
   SYSTEMS,
   FACTIONS,
   MANUFACTURERS,
   TAGS,
 } from "@mini-vault/shared";
 import { Loader2 } from "lucide-react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import { ImageUpload } from "./ImageUpload";
 import { Input, Button, Label, Textarea } from "./ui";
 import { uploadToCloudinary } from "@/lib/cloudinary";
 
-// Custom mode state
-// Add onSuccess to props
-export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
+export function ModelForm({
+  onSuccess,
+  isEdit = false,
+}: {
+  onSuccess?: () => void;
+  isEdit?: boolean;
+}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formFiles, setFormFiles] = useState<File[]>([]);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { id } = useParams();
+
+  // Try to get model from state (passed from List)
+  const existingModel = location.state?.model as Model | undefined;
 
   // Custom mode state
   const [isCustomSystem, setIsCustomSystem] = useState(false);
   const [isCustomFaction, setIsCustomFaction] = useState(false);
   const [isCustomManufacturer, setIsCustomManufacturer] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -41,51 +54,82 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
       assembled: false,
       primed: false,
       based: false,
+      forSale: false,
       tags: [],
       images: [],
     },
   });
 
-  // Persistence Logic
+  // Pre-fill data if Editing
   useEffect(() => {
-    // 1. Load saved data on mount
-    const saved = localStorage.getItem("model-tracker-form");
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        // Special handling: don't load images, but load everything else
-        Object.keys(parsed).forEach((key) => {
-          if (key !== "images") {
-            setValue(key as any, parsed[key]);
-          }
-        });
+    if (isEdit && existingModel) {
+      // We are in edit mode and have data
+      setValue("name", existingModel.name);
+      setValue("system", existingModel.system as any);
+      setValue("faction", existingModel.faction as any);
+      setValue("manufacturer", (existingModel.manufacturer || "") as any);
+      setValue("count", existingModel.count);
+      setValue("notes", existingModel.notes);
+      setValue("tags", existingModel.tags);
+      setValue("painted", existingModel.painted);
+      setValue("assembled", existingModel.assembled);
+      setValue("primed", existingModel.primed);
+      setValue("based", existingModel.based);
+      setValue("forSale", existingModel.forSale ?? false);
+      setValue("images", existingModel.images);
 
-        // Restore custom flags if saved values exist but match no list
-        if (parsed.system && !SYSTEMS.includes(parsed.system)) {
-          setIsCustomSystem(true);
+      // Handle custom fields
+      if (
+        existingModel.system &&
+        !SYSTEMS.includes(existingModel.system as any)
+      )
+        setIsCustomSystem(true);
+      if (
+        existingModel.faction &&
+        !FACTIONS.includes(existingModel.faction as any)
+      )
+        setIsCustomFaction(true);
+      if (
+        existingModel.manufacturer &&
+        !MANUFACTURERS.includes((existingModel.manufacturer || "") as any)
+      )
+        setIsCustomManufacturer(true);
+    } else if (!isEdit) {
+      // 1. Load localstorage data only if CREATING new
+      const saved = localStorage.getItem("model-tracker-form");
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          Object.keys(parsed).forEach((key) => {
+            if (key !== "images") {
+              setValue(key as any, parsed[key]);
+            }
+          });
+          if (parsed.system && !SYSTEMS.includes(parsed.system))
+            setIsCustomSystem(true);
+          if (parsed.faction && !FACTIONS.includes(parsed.faction))
+            setIsCustomFaction(true);
+          if (
+            parsed.manufacturer &&
+            !MANUFACTURERS.includes(parsed.manufacturer)
+          )
+            setIsCustomManufacturer(true);
+        } catch (e) {
+          console.error("Failed to load saved form", e);
         }
-        if (parsed.faction && !FACTIONS.includes(parsed.faction)) {
-          setIsCustomFaction(true);
-        }
-        if (
-          parsed.manufacturer &&
-          !MANUFACTURERS.includes(parsed.manufacturer)
-        ) {
-          setIsCustomManufacturer(true);
-        }
-      } catch (e) {
-        console.error("Failed to load saved form", e);
       }
     }
-  }, [setValue]);
+  }, [isEdit, existingModel, setValue]);
 
   useEffect(() => {
-    // 2. Save data on change
-    const subscription = watch((value) => {
-      localStorage.setItem("model-tracker-form", JSON.stringify(value));
-    });
-    return () => subscription.unsubscribe();
-  }, [watch]);
+    // 2. Save data on change (only for new forms to prevent overwriting draft with edit data)
+    if (!isEdit) {
+      const subscription = watch((value) => {
+        localStorage.setItem("model-tracker-form", JSON.stringify(value));
+      });
+      return () => subscription.unsubscribe();
+    }
+  }, [watch, isEdit]);
 
   const systemValue = watch("system");
   const factionValue = watch("faction");
@@ -117,12 +161,18 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
       // 1. Upload Images
       const uploadPromises = formFiles.map((file) => uploadToCloudinary(file));
       const uploadResults = await Promise.all(uploadPromises);
-      const imageUrls = uploadResults.map((r) => r.secure_url);
+      const newImageUrls = uploadResults.map((r) => r.secure_url);
 
-      const finalData = {
+      const finalData: any = {
         ...data,
-        images: imageUrls,
+        images: [...(data.images || []), ...newImageUrls], // Append new images to existing
       };
+
+      // Ensure we pass ID if editing
+      if (isEdit && existingModel) {
+        finalData.id = existingModel.id;
+        finalData.createdAt = existingModel.createdAt;
+      }
 
       // 2. Submit to Netlify Function with Key
       const response = await fetch("/.netlify/functions/submit-model", {
@@ -139,14 +189,14 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
       try {
         result = JSON.parse(text);
       } catch {
-        // Not JSON
+        /* Not JSON */
       }
 
       if (!response.ok) {
         let errorMessage = "Failed to save model";
         if (response.status === 401) {
           errorMessage = "Unauthorized! Check your Vault Key.";
-          setIsLocked(true); // Re-lock if key is rejected
+          setIsLocked(true);
         } else if (result && result.error) {
           errorMessage =
             typeof result.error === "string"
@@ -158,20 +208,19 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
         throw new Error(errorMessage);
       }
 
-      if (!result) {
+      if (!result)
         throw new Error("Server succeeded but returned no JSON data");
-      }
+
       console.log("Success:", result);
-      alert("Model Saved Successfully!");
 
       reset();
       setFormFiles([]);
-      setIsCustomSystem(false);
-      setIsCustomFaction(false);
-      setIsCustomManufacturer(false);
-      localStorage.removeItem("model-tracker-form"); // Clear saved state on success
+      if (!isEdit) {
+        localStorage.removeItem("model-tracker-form");
+      }
 
-      if (onSuccess) onSuccess(); // Navigate back to list
+      if (onSuccess) onSuccess();
+      else navigate("/"); // Default back to home
     } catch (error: any) {
       console.error(error);
       alert(`Submission failed: ${error.message}`);
@@ -185,8 +234,8 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
       <div className="flex flex-col items-center justify-center p-8 space-y-4 max-w-md mx-auto mt-10 border rounded-lg shadow-sm">
         <h2 className="text-xl font-bold">🔐 Vault Access</h2>
         <p className="text-sm text-muted-foreground text-center">
-          Enter your secret key to enable adding models. This will be saved on
-          this device.
+          Enter your secret key to enable {isEdit ? "editing" : "adding"}{" "}
+          models.
         </p>
         <form onSubmit={handleUnlock} className="flex flex-col gap-4 w-full">
           <Input
@@ -201,11 +250,27 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
     );
   }
 
+  // If editing but no model data found (e.g. direct URL visit without state),
+  // we should ideally fetch it. For now, show a helpful message.
+  if (isEdit && !existingModel && !id) {
+    return (
+      <div className="text-center p-8">
+        Error: No model data found. Please select a model from the list.
+      </div>
+    );
+  }
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-8 w-full max-w-lg mx-auto p-4"
     >
+      <div className="flex justify-between items-center">
+        <h2 className="text-xl font-bold">
+          {isEdit ? "Edit Model" : "Add New Model"}
+        </h2>
+      </div>
+
       {/* Name */}
       <div className="space-y-2">
         <Label htmlFor="name">Model Name</Label>
@@ -385,11 +450,12 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
       </div>
 
       {/* Toggles Grid */}
+      <Label>Status</Label>
       <div className="grid grid-cols-2 gap-4 border rounded-lg p-4 bg-muted/20">
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300"
+            className="w-5 h-5 rounded border-gray-300 accent-primary"
             {...register("assembled")}
           />
           <span>Assembled</span>
@@ -397,7 +463,7 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300"
+            className="w-5 h-5 rounded border-gray-300 accent-primary"
             {...register("primed")}
           />
           <span>Primed</span>
@@ -405,7 +471,7 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300"
+            className="w-5 h-5 rounded border-gray-300 accent-primary"
             {...register("painted")}
           />
           <span>Painted</span>
@@ -413,14 +479,32 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300"
+            className="w-5 h-5 rounded border-gray-300 accent-primary"
             {...register("based")}
           />
           <span>Based</span>
         </label>
       </div>
 
-      {/* Tags (Basic text input for now, split by comma) */}
+      {/* For Sale Toggle */}
+      <div className="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-900">
+        <label className="flex items-center space-x-2 cursor-pointer">
+          <input
+            type="checkbox"
+            className="w-6 h-6 rounded border-red-500 accent-red-600"
+            {...register("forSale")}
+          />
+          <div className="flex flex-col">
+            <span className="font-bold text-red-800 dark:text-red-400">
+              Mark For Sale
+            </span>
+            <span className="text-xs text-red-600/80 dark:text-red-400/70">
+              Review this item in the Sell Pile
+            </span>
+          </div>
+        </label>
+      </div>
+
       {/* Tags */}
       <div className="space-y-3">
         <Label>Tags</Label>
@@ -437,10 +521,6 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
                 field.onChange([...currentTags, tag]);
               }
             };
-
-            // Available tags (helper to show what's common)
-            // We'll show standard TAGS as toggles
-            // Plus an input for custom tags
 
             return (
               <div className="space-y-3">
@@ -510,11 +590,27 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
       {/* Images */}
       <div className="space-y-2">
         <Label>Photos</Label>
+        {isEdit && existingModel?.images?.length ? (
+          <div className="mb-2 grid grid-cols-4 gap-2">
+            {existingModel.images.map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                className="rounded-md w-full h-20 object-cover border"
+              />
+            ))}
+          </div>
+        ) : null}
         <ImageUpload
           value={formFiles}
           onChange={setFormFiles}
           disabled={isSubmitting}
         />
+        {isEdit && (
+          <p className="text-xs text-muted-foreground">
+            New photos will be added to existing ones.
+          </p>
+        )}
       </div>
 
       {/* Notes */}

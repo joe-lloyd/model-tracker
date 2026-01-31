@@ -73,14 +73,29 @@ export const handler: Handler = async (event: HandlerEvent) => {
           // If 404, we just create new file, sha remains undefined
         }
 
-        // Create new Model object
         const newModel: Model = {
-          id: randomUUID(),
-          createdAt: new Date().toISOString(),
+          id: newModelInput.id || randomUUID(), // Use provided ID (edit) or new one
+          createdAt: newModelInput.createdAt || new Date().toISOString(), // Keep original date if editing
           ...newModelInput,
         };
 
-        const updatedData = [...existingData, newModel];
+        // Check if updating existing
+        const existingIndex = existingData.findIndex(
+          (m) => m.id === newModel.id,
+        );
+        let updatedData: Model[];
+
+        if (existingIndex >= 0) {
+          // Update existing
+          updatedData = [...existingData];
+          updatedData[existingIndex] = {
+            ...existingData[existingIndex],
+            ...newModel,
+          };
+        } else {
+          // Append new
+          updatedData = [...existingData, newModel];
+        }
 
         // Commit back to GitHub
         const newContentBase64 = Buffer.from(

@@ -14,6 +14,7 @@ export const ModelSchema = z.object({
   assembled: z.boolean().default(false),
   primed: z.boolean().default(false),
   based: z.boolean().default(false),
+  forSale: z.boolean().default(false),
 
   notes: z.string().optional(),
   images: z.array(z.string()).default([]),
@@ -24,9 +25,10 @@ export const ModelSchema = z.object({
 export type Model = z.infer<typeof ModelSchema>;
 
 // Input schema for the form (excludes server-generated fields like id, createdAt)
-export const ModelInputSchema = ModelSchema.omit({
-  id: true,
-  createdAt: true,
+// Input schema for the form. We make ID and createdAt optional for edits.
+export const ModelInputSchema = ModelSchema.extend({
+  id: z.string().optional(),
+  createdAt: z.string().optional(),
 });
 
 export type ModelInput = z.infer<typeof ModelInputSchema>;
