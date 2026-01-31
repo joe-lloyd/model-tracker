@@ -267,5 +267,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769886315/mini-vault/mfrdnp80vsl4yaepro0j.jpg"
     ]
+  },
+  {
+    "id": "5da9a5db-5342-476c-9b4e-cef89330047b",
+    "createdAt": "2026-01-31T19:06:40.950Z",
+    "name": "Ork War Boss",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "HQ"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769886399/mini-vault/jtciamipkt1ey9ozbgnz.jpg"
+    ]
   }
 ]
