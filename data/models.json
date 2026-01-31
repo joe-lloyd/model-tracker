@@ -836,5 +836,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894021/mini-vault/okjymmtftuzrzvsd9na7.jpg"
     ]
+  },
+  {
+    "id": "b951e742-b1a5-4f6d-8d12-4b642f7c1f1f",
+    "createdAt": "2026-01-31T21:18:51.643Z",
+    "name": "Elven King ",
+    "system": "OPR",
+    "faction": "Elves",
+    "manufacturer": "Other",
+    "tags": [
+      "HQ",
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894329/mini-vault/nlj53cqdaf3zsfv4ktqd.jpg"
+    ]
   }
 ]
