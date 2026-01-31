@@ -83,30 +83,31 @@ export function ModelList({ onAddNew }: { onAddNew: () => void }) {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Masonry Layout using CSS Columns */}
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 space-y-4">
         {models.map((model) => (
           <div
             key={model.id}
-            className="group relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow"
+            className="break-inside-avoid mb-4 group relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow"
           >
-            {/* Image Aspect Ratio */}
-            <div className="aspect-square w-full overflow-hidden bg-muted relative">
+            {/* Image - Native Aspect Ratio */}
+            <div className="w-full relative bg-muted/20">
               {model.images && model.images.length > 0 ? (
                 <img
                   src={model.images[0]}
                   alt={model.name}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-auto block transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />
               ) : (
-                <div className="flex h-full items-center justify-center text-muted-foreground bg-muted/50">
+                <div className="flex h-32 items-center justify-center text-muted-foreground bg-muted/50">
                   No Image
                 </div>
               )}
 
               {/* Count Badge */}
               {model.count > 1 && (
-                <span className="absolute top-2 right-2 bg-black/75 text-white text-xs font-bold px-2 py-1 rounded-full">
+                <span className="absolute top-2 right-2 bg-black/75 text-white text-xs font-bold px-2 py-1 rounded-full z-10">
                   x{model.count}
                 </span>
               )}

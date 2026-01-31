@@ -7,7 +7,9 @@ function App() {
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-start bg-background p-4 pt-4 md:pt-10">
-      <div className="flex w-full max-w-lg flex-col items-center gap-6">
+      <div
+        className={`flex w-full flex-col items-center gap-6 ${view === "list" ? "max-w-7xl" : "max-w-lg"}`}
+      >
         {/* Header / Nav */}
         <div className="flex w-full items-center justify-between pb-4 border-b">
           <div className="cursor-pointer" onClick={() => setView("list")}>
