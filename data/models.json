@@ -60,5 +60,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769881714/mini-vault/u1vs5rakzljefa0zy3wx.jpg"
     ]
+  },
+  {
+    "id": "43f8c57c-906e-49f7-ba74-882b65c2a675",
+    "createdAt": "2026-01-31T18:42:14.035Z",
+    "name": "Battle waggon ",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Vehicle",
+      "Plastic Crack"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769884932/mini-vault/knhswmdt0oscakahqnds.jpg"
+    ]
   }
 ]
