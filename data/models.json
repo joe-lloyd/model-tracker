@@ -979,5 +979,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769895066/mini-vault/nptuibd4qxg8584wofnu.jpg"
     ]
+  },
+  {
+    "id": "786ea331-49b2-406d-9912-c2d7c80a9db6",
+    "createdAt": "2026-01-31T21:32:30.512Z",
+    "name": "Panther",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769895149/mini-vault/wmryhg8t7snygjqisver.jpg"
+    ]
   }
 ]
