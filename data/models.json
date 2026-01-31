@@ -513,5 +513,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888342/mini-vault/lwuog1drimv4kvqizaw2.jpg"
     ]
+  },
+  {
+    "id": "472f6f29-b600-415a-bcf6-7d60b45d0d40",
+    "createdAt": "2026-01-31T19:43:22.207Z",
+    "name": "Old school metal Ork Boyz",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal",
+      "Battleline"
+    ],
+    "count": 39,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888600/mini-vault/tg3u712pm2wjn288ik1t.jpg"
+    ]
   }
 ]
