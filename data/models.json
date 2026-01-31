@@ -1062,5 +1062,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769896204/mini-vault/cul5or4iasl9rjrhtifx.jpg"
     ]
+  },
+  {
+    "id": "d5eb8090-3f69-4f53-a0b7-cb4d8447cd6e",
+    "createdAt": "2026-01-31T21:53:25.294Z",
+    "name": "Elven Balista",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 4,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769896404/mini-vault/ncad8tuj7wnsob2xaztb.jpg"
+    ]
   }
 ]
