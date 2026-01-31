@@ -408,5 +408,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769887452/mini-vault/ek2qxbbrjkzlcativfkn.jpg"
     ]
+  },
+  {
+    "id": "6a2515f8-d5a8-4d00-9238-ea0ed4519161",
+    "createdAt": "2026-01-31T19:29:33.242Z",
+    "name": "Ork Boyz",
+    "system": "OPR",
+    "faction": "Orks",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Battleline",
+      "Plastic Crack"
+    ],
+    "count": 36,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "5 heavy weapons\n6 power claws",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769887771/mini-vault/mjohj7tviyndcriltidd.jpg"
+    ]
   }
 ]
