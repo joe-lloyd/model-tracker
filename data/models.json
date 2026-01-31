@@ -939,5 +939,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894877/mini-vault/q17p1bhrgk3a470ltrhv.jpg"
     ]
+  },
+  {
+    "id": "be2697de-98ec-42bf-9895-b67168b5c486",
+    "createdAt": "2026-01-31T21:29:36.074Z",
+    "name": "Elven hypogriph rider ",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894973/mini-vault/kvzcn3tutaxxtwuekagw.jpg"
+    ]
   }
 ]
