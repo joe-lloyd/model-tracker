@@ -654,5 +654,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889385/mini-vault/evdkm54mggzs6devsn0e.jpg"
     ]
+  },
+  {
+    "id": "bd30fba2-2370-43b1-b5aa-4cceb27f564e",
+    "createdAt": "2026-01-31T19:58:09.657Z",
+    "name": "Old school Boyz ",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 11,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769889488/mini-vault/u3xerxaahvwfh9p8qvoc.jpg"
+    ]
   }
 ]
