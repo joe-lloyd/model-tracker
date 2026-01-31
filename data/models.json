@@ -777,5 +777,23 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893573/mini-vault/kli9iihqu0fp6fhz8elu.jpg"
     ]
+  },
+  {
+    "id": "914d1d47-6813-4931-b470-152fc67ddfa6",
+    "createdAt": "2026-01-31T21:11:39.678Z",
+    "name": "Elite Elves ",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 10,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893897/mini-vault/toijj9pvfbdby9cdki9j.jpg"
+    ]
   }
 ]
