@@ -815,5 +815,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893954/mini-vault/rmsjqztb1tpfnqygmgni.jpg"
     ]
+  },
+  {
+    "id": "06d75635-6b4f-4b0d-a745-c2778fe4b29e",
+    "createdAt": "2026-01-31T21:13:42.946Z",
+    "name": "Elven Mage",
+    "system": "OPR",
+    "faction": "Elves",
+    "manufacturer": "Other",
+    "tags": [
+      "HQ",
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769894021/mini-vault/okjymmtftuzrzvsd9na7.jpg"
+    ]
   }
 ]
