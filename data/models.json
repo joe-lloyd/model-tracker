@@ -367,5 +367,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769887217/mini-vault/trvfhoyr8w9chzo1goa7.jpg"
     ]
+  },
+  {
+    "id": "9ee6696c-f252-4cd4-9680-79d39ba494ba",
+    "createdAt": "2026-01-31T19:21:28.839Z",
+    "name": "Battle Waggon ",
+    "system": "OPR",
+    "faction": "Orks",
+    "manufacturer": "Other",
+    "tags": [
+      "Vehicle",
+      "Print"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769887287/mini-vault/rkajqirmghydehaxt7ym.jpg"
+    ]
   }
 ]
