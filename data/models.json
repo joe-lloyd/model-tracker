@@ -429,5 +429,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769887771/mini-vault/mjohj7tviyndcriltidd.jpg"
     ]
+  },
+  {
+    "id": "34f28fd8-aaf7-4281-9f84-8f754710fe24",
+    "createdAt": "2026-01-31T19:33:50.185Z",
+    "name": "Old school War Boss",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "HQ",
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888028/mini-vault/g1bzbrql4lao2zrz3ifn.jpg"
+    ]
   }
 ]
