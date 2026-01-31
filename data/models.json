@@ -162,5 +162,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885630/mini-vault/gdjap8uwxaxazwkyveok.jpg"
     ]
+  },
+  {
+    "id": "bad72e35-3643-4f0c-82d2-ec9d8effaf93",
+    "createdAt": "2026-01-31T18:55:26.891Z",
+    "name": "Killer kans",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Vehicle",
+      "Plastic Crack"
+    ],
+    "count": 3,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885725/mini-vault/bpeil0jze4dwr45diufg.jpg"
+    ]
   }
 ]
