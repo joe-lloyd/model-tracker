@@ -450,5 +450,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888028/mini-vault/g1bzbrql4lao2zrz3ifn.jpg"
     ]
+  },
+  {
+    "id": "e355de80-b44b-425c-97bf-d0cbdb8a8024",
+    "createdAt": "2026-01-31T19:35:54.151Z",
+    "name": "Deff Kopter",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Vehicle",
+      "Plastic Crack"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888153/mini-vault/nbbxad9e5cquoiuxurmc.jpg"
+    ]
   }
 ]
