@@ -594,5 +594,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888808/mini-vault/oq9b6oz8y3tggsrmcod1.jpg"
     ]
+  },
+  {
+    "id": "2dba5c9c-062d-496e-b818-96aab390e5d4",
+    "createdAt": "2026-01-31T19:47:33.508Z",
+    "name": "Random plastic boy",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888852/mini-vault/vmuvbpfqqpmrdoejiqkn.jpg"
+    ]
   }
 ]
