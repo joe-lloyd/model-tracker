@@ -554,5 +554,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888704/mini-vault/tthq6w6zcy5vi48xezqz.jpg"
     ]
+  },
+  {
+    "id": "bfaea484-9b27-4850-95ed-31b3d00895ac",
+    "createdAt": "2026-01-31T19:45:58.377Z",
+    "name": "Nob",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769888757/mini-vault/xaoyqthlwzbx8fvljbwg.jpg"
+    ]
   }
 ]
