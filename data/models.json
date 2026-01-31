@@ -347,5 +347,25 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769887152/mini-vault/zmrboxdmyqcuxbew4lvu.jpg"
     ]
+  },
+  {
+    "id": "ef8e8bda-6f4f-498f-a71d-272f2e833dd4",
+    "createdAt": "2026-01-31T19:20:18.603Z",
+    "name": "Ork Pain boy",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769887217/mini-vault/trvfhoyr8w9chzo1goa7.jpg"
+    ]
   }
 ]
