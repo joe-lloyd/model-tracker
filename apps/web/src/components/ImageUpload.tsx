@@ -46,23 +46,70 @@ export function ImageUpload({ value, onChange, disabled }: ImageUploadProps) {
 
   return (
     <div className="space-y-4">
-      <div
-        {...getRootProps()}
-        className={cn(
-          "relative flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer hover:bg-muted/50 transition-colors",
-          isDragActive
-            ? "border-primary bg-muted/50"
-            : "border-muted-foreground/25",
-          disabled && "opacity-50 cursor-not-allowed",
-        )}
-      >
-        <input {...getInputProps({ capture: "environment" })} />{" "}
-        {/* Mobile capture hint */}
-        <div className="flex flex-col items-center justify-center pt-5 pb-6">
-          <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
-          <p className="mb-2 text-sm text-muted-foreground">
-            <span className="font-semibold">Tap to upload</span> or drag and
-            drop
+      <div className="flex gap-4 w-full">
+        {/* Gallery / Dropzone */}
+        <div
+          {...getRootProps()}
+          className={cn(
+            "flex-1 flex flex-col items-center justify-center h-32 border-2 border-dashed rounded-lg cursor-pointer hover:bg-muted/50 transition-colors",
+            isDragActive
+              ? "border-primary bg-muted/50"
+              : "border-muted-foreground/25",
+            disabled && "opacity-50 cursor-not-allowed",
+          )}
+        >
+          <input {...getInputProps()} />
+          <Upload className="w-6 h-6 mb-2 text-muted-foreground" />
+          <p className="text-xs text-center text-muted-foreground font-medium">
+            Select Images
+          </p>
+        </div>
+
+        {/* Camera Button (Hidden Input) */}
+        <div
+          className={cn(
+            "flex-1 flex flex-col items-center justify-center h-32 border-2 border-dashed border-muted-foreground/25 rounded-lg cursor-pointer hover:bg-muted/50 transition-colors",
+            disabled && "opacity-50 cursor-not-allowed",
+          )}
+          onClick={() => {
+            if (disabled) return;
+            // Trigger camera input
+            const camInput = document.getElementById("camera-input");
+            if (camInput) camInput.click();
+          }}
+        >
+          <input
+            id="camera-input"
+            type="file"
+            accept="image/*"
+            capture="environment"
+            className="hidden"
+            onChange={(e) => {
+              if (e.target.files && e.target.files.length > 0) {
+                const files = Array.from(e.target.files);
+                onChange([...value, ...files]);
+                // Reset value so we can take another photo of same thing if needed
+                e.target.value = "";
+              }
+            }}
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-6 h-6 mb-2 text-muted-foreground"
+          >
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+            <circle cx="12" cy="13" r="3" />
+          </svg>
+          <p className="text-xs text-center text-muted-foreground font-medium">
+            Take Photo
           </p>
         </div>
       </div>

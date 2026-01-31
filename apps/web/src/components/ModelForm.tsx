@@ -103,8 +103,39 @@ export function ModelForm() {
         images: imageUrls,
       };
 
-      console.log("Form Data Ready:", finalData);
-      alert("Validation passed! Check console for data JSON.");
+      // 2. Submit to Netlify Function
+      const response = await fetch("/.netlify/functions/submit-model", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(finalData),
+      });
+
+      const text = await response.text();
+      let result;
+      try {
+        result = JSON.parse(text);
+      } catch {
+        // Not JSON
+      }
+
+      if (!response.ok) {
+        let errorMessage = "Failed to save model";
+        if (result && result.error) {
+          errorMessage =
+            typeof result.error === "string"
+              ? result.error
+              : JSON.stringify(result.error);
+        } else {
+          errorMessage = text || response.statusText || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
+      if (!result) {
+        throw new Error("Server succeeded but returned no JSON data");
+      }
+      console.log("Success:", result);
+      alert("Model Saved Successfully!");
 
       reset();
       setFormFiles([]);
@@ -112,9 +143,9 @@ export function ModelForm() {
       setIsCustomFaction(false);
       setIsCustomManufacturer(false);
       localStorage.removeItem("model-tracker-form"); // Clear saved state on success
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      alert("Submission failed");
+      alert(`Submission failed: ${error.message}`);
     } finally {
       setIsSubmitting(false);
     }
