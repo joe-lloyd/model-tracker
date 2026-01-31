@@ -1041,5 +1041,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769895882/mini-vault/lsnx61qanulp7l931isy.jpg"
     ]
+  },
+  {
+    "id": "c57409b3-d995-4446-9d3f-31c61a01b59e",
+    "createdAt": "2026-01-31T21:50:08.137Z",
+    "name": "Wood Elf Spearmen ",
+    "system": "Kings of War",
+    "faction": "Wood Elves",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Battleline",
+      "Metal"
+    ],
+    "count": 8,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769896204/mini-vault/cul5or4iasl9rjrhtifx.jpg"
+    ]
   }
 ]
