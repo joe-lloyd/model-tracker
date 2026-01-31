@@ -101,5 +101,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885054/mini-vault/lnbgohxzauwqjthkeem8.jpg"
     ]
+  },
+  {
+    "id": "de7c8c0e-b65b-4d36-a535-4346155616f4",
+    "createdAt": "2026-01-31T18:50:03.095Z",
+    "name": "Ork Bikers",
+    "system": "Warhammer 40,000",
+    "faction": "Orks",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Vehicle",
+      "Plastic Crack"
+    ],
+    "count": 12,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769885401/mini-vault/kvlmn6gxiav2nsofexrm.jpg"
+    ]
   }
 ]
