@@ -9,8 +9,17 @@ const GITHUB_REPO = process.env.GITHUB_REPO; // format: "owner/repo"
 const MAX_RETRIES = 3;
 
 export const handler: Handler = async (event: HandlerEvent) => {
+  const VAULT_KEY = process.env.VAULT_KEY;
+
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
+  }
+
+  // Security Check
+  const clientKey = event.headers["x-vault-key"];
+  if (VAULT_KEY && clientKey !== VAULT_KEY) {
+    console.warn("Unauthorized attempt with key:", clientKey);
+    return { statusCode: 401, body: "Unauthorized: Invalid Vault Key" };
   }
 
   if (!GITHUB_TOKEN || !GITHUB_REPO) {

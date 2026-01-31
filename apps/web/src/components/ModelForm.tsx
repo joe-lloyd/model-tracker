@@ -91,6 +91,26 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
   const factionValue = watch("faction");
   const manufacturerValue = watch("manufacturer");
 
+  const [vaultKey, setVaultKey] = useState("");
+  const [isLocked, setIsLocked] = useState(true);
+
+  // Load key from storage on mount
+  useEffect(() => {
+    const savedKey = localStorage.getItem("mini-vault-key");
+    if (savedKey) {
+      setVaultKey(savedKey);
+      setIsLocked(false);
+    }
+  }, []);
+
+  const handleUnlock = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (vaultKey.trim()) {
+      localStorage.setItem("mini-vault-key", vaultKey.trim());
+      setIsLocked(false);
+    }
+  };
+
   const onSubmit = async (data: ModelInput) => {
     setIsSubmitting(true);
     try {
@@ -104,10 +124,13 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
         images: imageUrls,
       };
 
-      // 2. Submit to Netlify Function
+      // 2. Submit to Netlify Function with Key
       const response = await fetch("/.netlify/functions/submit-model", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-vault-key": vaultKey,
+        },
         body: JSON.stringify(finalData),
       });
 
@@ -121,7 +144,10 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
 
       if (!response.ok) {
         let errorMessage = "Failed to save model";
-        if (result && result.error) {
+        if (response.status === 401) {
+          errorMessage = "Unauthorized! Check your Vault Key.";
+          setIsLocked(true); // Re-lock if key is rejected
+        } else if (result && result.error) {
           errorMessage =
             typeof result.error === "string"
               ? result.error
@@ -153,6 +179,27 @@ export function ModelForm({ onSuccess }: { onSuccess?: () => void }) {
       setIsSubmitting(false);
     }
   };
+
+  if (isLocked) {
+    return (
+      <div className="flex flex-col items-center justify-center p-8 space-y-4 max-w-md mx-auto mt-10 border rounded-lg shadow-sm">
+        <h2 className="text-xl font-bold">🔐 Vault Access</h2>
+        <p className="text-sm text-muted-foreground text-center">
+          Enter your secret key to enable adding models. This will be saved on
+          this device.
+        </p>
+        <form onSubmit={handleUnlock} className="flex flex-col gap-4 w-full">
+          <Input
+            type="password"
+            placeholder="Enter Vault Key..."
+            value={vaultKey}
+            onChange={(e) => setVaultKey(e.target.value)}
+          />
+          <Button type="submit">Unlock Vault</Button>
+        </form>
+      </div>
+    );
+  }
 
   return (
     <form
