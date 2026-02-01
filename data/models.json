@@ -1652,5 +1652,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938679/mini-vault/mlosig9ts7en7tnieqqg.jpg"
     ]
+  },
+  {
+    "id": "ca583171-472a-49f5-9b99-4411244765f4",
+    "createdAt": "2026-02-01T09:38:56.007Z",
+    "name": "Succubus ",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "HQ",
+      "Resin"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938734/mini-vault/vlalwi4a4ycybjfkt6yo.jpg"
+    ]
   }
 ]
