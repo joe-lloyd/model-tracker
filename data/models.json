@@ -1758,5 +1758,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944092/mini-vault/xxgco6wr3d9a8bb9hhdu.jpg"
     ]
+  },
+  {
+    "id": "7d7da27c-50c3-412f-acab-e0590db29e4c",
+    "createdAt": "2026-02-01T11:09:33.338Z",
+    "name": "Hive tyrant",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "HQ",
+      "Metal"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": false,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944172/mini-vault/nnzj95pkkjtxzohuys2d.jpg"
+    ]
   }
 ]
