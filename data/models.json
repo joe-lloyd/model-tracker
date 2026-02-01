@@ -2288,5 +2288,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954411/mini-vault/hus0yslj8pkjo3std3fu.jpg"
     ]
+  },
+  {
+    "id": "b1bedb4c-4002-4dba-9b7c-abbe30caa8d8",
+    "createdAt": "2026-02-01T14:00:55.661Z",
+    "name": "Elven Archers ",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 10,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954454/mini-vault/gnlxemjidtyj86fckho1.jpg"
+    ]
   }
 ]
