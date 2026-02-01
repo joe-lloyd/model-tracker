@@ -1396,5 +1396,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937183/mini-vault/dzvkq2afaliqcqnnfoav.jpg"
     ]
+  },
+  {
+    "id": "dba53bf9-2b78-456a-a96e-8b5b8ba707ce",
+    "createdAt": "2026-02-01T09:14:13.914Z",
+    "name": "Jetbike",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Vehicle",
+      "Print"
+    ],
+    "count": 6,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937252/mini-vault/kdpfclvytxlmynuesskm.jpg"
+    ]
   }
 ]
