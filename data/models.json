@@ -2330,5 +2330,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954527/mini-vault/tz5aerasdisyvw2j1auk.jpg"
     ]
+  },
+  {
+    "id": "87a5212f-1e32-4c21-86df-9a136e9f425b",
+    "createdAt": "2026-02-01T14:03:04.522Z",
+    "name": "Human Warriors ",
+    "system": "Kings of War",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 5,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954583/mini-vault/m49xmply1k0inkvyba8f.jpg"
+    ]
   }
 ]
