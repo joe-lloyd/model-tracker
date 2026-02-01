@@ -3101,5 +3101,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769966893/mini-vault/y5zfgd4z4srlm1odv1ga.jpg"
     ]
+  },
+  {
+    "id": "1810adc6-d8bf-4320-aa5f-e0e27d1328dc",
+    "createdAt": "2026-02-01T17:29:42.235Z",
+    "name": "Wargs",
+    "system": "Kings of War",
+    "faction": "Goblins",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Metal"
+    ],
+    "count": 9,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769966980/mini-vault/dprndovdppwn6gmkeypb.jpg"
+    ]
   }
 ]
