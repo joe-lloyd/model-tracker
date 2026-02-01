@@ -2735,5 +2735,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963349/mini-vault/v0imkeavgimhxbsjymms.jpg"
     ]
+  },
+  {
+    "id": "65487b6e-4324-4fa5-9d74-0ee5eb5e3cd5",
+    "createdAt": "2026-02-01T16:31:34.648Z",
+    "name": "Dark Elf Raptor Riders",
+    "system": "OPR:AOF",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Resin"
+    ],
+    "count": 6,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963493/mini-vault/txgvdjs0xnqgfunluxf4.jpg"
+    ]
   }
 ]
