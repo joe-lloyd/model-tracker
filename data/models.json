@@ -2457,5 +2457,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769955562/mini-vault/nl4j0kag2gqnerb9s7bs.jpg"
     ]
+  },
+  {
+    "id": "31b17c87-091d-45ce-bb29-0f33b5bd1f0e",
+    "createdAt": "2026-02-01T14:34:10.035Z",
+    "name": "Orc standard bearer",
+    "system": "Kings of War",
+    "faction": "Orks",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769956447/mini-vault/ogedxiilad6h2citchmo.jpg"
+    ]
   }
 ]
