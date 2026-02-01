@@ -2053,5 +2053,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945604/mini-vault/jy5tiobag6xdcb3ezc9q.jpg"
     ]
+  },
+  {
+    "id": "38edb8b7-64c9-480b-a168-9982b45d8a07",
+    "createdAt": "2026-02-01T11:36:02.011Z",
+    "name": "Old school Gargoyle",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 8,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945760/mini-vault/szjhy9x5kairawt3vhlp.jpg"
+    ]
   }
 ]
