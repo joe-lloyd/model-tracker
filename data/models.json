@@ -2478,5 +2478,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769956447/mini-vault/ogedxiilad6h2citchmo.jpg"
     ]
+  },
+  {
+    "id": "a16c5f5d-bcb1-47e5-b2e0-371e43e02c78",
+    "createdAt": "2026-02-01T14:35:42.299Z",
+    "name": "Orc Boar Chariot ",
+    "system": "Kings of War",
+    "faction": "Orks",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769956540/mini-vault/dypz74glmskf4wvgqhij.jpg"
+    ]
   }
 ]
