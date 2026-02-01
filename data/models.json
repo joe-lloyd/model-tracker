@@ -1588,5 +1588,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938408/mini-vault/qyzsimpqybe34jg1qdfe.jpg"
     ]
+  },
+  {
+    "id": "3cd1a17a-a45d-4fe7-b554-16682f7f5f53",
+    "createdAt": "2026-02-01T09:35:39.939Z",
+    "name": "Gene tech master",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "HQ",
+      "Resin"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938538/mini-vault/cmv450zl2hhi5kiwp4d5.jpg"
+    ]
   }
 ]
