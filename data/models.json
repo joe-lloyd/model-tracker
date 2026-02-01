@@ -1545,5 +1545,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938240/mini-vault/jh7jdtjf29gv6smfx1i1.jpg"
     ]
+  },
+  {
+    "id": "4a5dfec5-88fa-4cfa-ac16-b299a1f070a3",
+    "createdAt": "2026-02-01T09:31:59.866Z",
+    "name": "Hoverboard Riders",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Battleline",
+      "Print"
+    ],
+    "count": 5,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938318/mini-vault/mslh2i8yppodgyloxmoc.jpg"
+    ]
   }
 ]
