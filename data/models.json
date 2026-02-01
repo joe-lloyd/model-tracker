@@ -3122,5 +3122,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769966980/mini-vault/dprndovdppwn6gmkeypb.jpg"
     ]
+  },
+  {
+    "id": "3f28e8cd-0443-4f05-aadd-9c3e275ed462",
+    "createdAt": "2026-02-01T17:31:20.675Z",
+    "name": "Gobline Artillery ",
+    "system": "Kings of War",
+    "faction": "Goblins",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Metal"
+    ],
+    "count": 2,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769967079/mini-vault/dfigvq8bcc4cyh320bno.jpg"
+    ]
   }
 ]
