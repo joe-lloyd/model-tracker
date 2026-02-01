@@ -2032,5 +2032,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945512/mini-vault/ydiuae60xoctwzuxhqcu.jpg"
     ]
+  },
+  {
+    "id": "19d77500-0d6e-4e05-8a47-ff3735d96292",
+    "createdAt": "2026-02-01T11:33:26.072Z",
+    "name": "Ravener",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 6,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945604/mini-vault/jy5tiobag6xdcb3ezc9q.jpg"
+    ]
   }
 ]
