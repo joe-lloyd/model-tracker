@@ -2372,5 +2372,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954821/mini-vault/lq4i1kqpmfjeerggmxez.jpg"
     ]
+  },
+  {
+    "id": "6e85869c-779f-4e00-b093-31c1e2477ebc",
+    "createdAt": "2026-02-01T14:08:32.258Z",
+    "name": "Human cavalry ",
+    "system": "Kings of War",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 25,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954910/mini-vault/emnsrrq3dlcaedi5yrhz.jpg"
+    ]
   }
 ]
