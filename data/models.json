@@ -6,10 +6,7 @@
     "system": "D&D / RPG",
     "faction": "Elves",
     "manufacturer": "Other",
-    "tags": [
-      "HQ",
-      "Metal"
-    ],
+    "tags": ["HQ", "Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -27,9 +24,7 @@
     "system": "Other",
     "faction": "Elves",
     "manufacturer": "Other",
-    "tags": [
-      "Print"
-    ],
+    "tags": ["Print"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -47,10 +42,7 @@
     "system": "Blood Bowl",
     "faction": "Human",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack",
-      "Gift"
-    ],
+    "tags": ["Plastic Crack", "Gift"],
     "count": 12,
     "painted": true,
     "assembled": true,
@@ -69,10 +61,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Plastic Crack"
-    ],
+    "tags": ["Vehicle", "Plastic Crack"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -87,12 +76,10 @@
     "id": "cd5b985c-e526-4add-a666-8b72bed7aa4c",
     "createdAt": "2026-01-31T18:44:17.275Z",
     "name": "Printed War Truk",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "Other",
-    "tags": [
-      "Print"
-    ],
+    "tags": ["Print"],
     "count": 2,
     "painted": false,
     "assembled": true,
@@ -110,10 +97,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Plastic Crack"
-    ],
+    "tags": ["Vehicle", "Plastic Crack"],
     "count": 12,
     "painted": false,
     "assembled": true,
@@ -131,10 +115,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Plastic Crack"
-    ],
+    "tags": ["Vehicle", "Plastic Crack"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -151,9 +132,7 @@
     "name": "Ork buggy ",
     "system": "Warhammer 40,000",
     "faction": "Orks",
-    "tags": [
-      "Vehicle"
-    ],
+    "tags": ["Vehicle"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -171,10 +150,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Plastic Crack"
-    ],
+    "tags": ["Vehicle", "Plastic Crack"],
     "count": 3,
     "painted": true,
     "assembled": true,
@@ -192,10 +168,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Metal"
-    ],
+    "tags": ["Vehicle", "Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -213,10 +186,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack",
-      "Battleline"
-    ],
+    "tags": ["Plastic Crack", "Battleline"],
     "count": 13,
     "painted": true,
     "assembled": true,
@@ -234,10 +204,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 12,
     "painted": true,
     "assembled": true,
@@ -255,10 +222,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 2,
     "painted": true,
     "assembled": true,
@@ -276,9 +240,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "HQ"
-    ],
+    "tags": ["HQ"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -296,9 +258,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 2,
     "painted": true,
     "assembled": true,
@@ -316,9 +276,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 45,
     "painted": false,
     "assembled": true,
@@ -336,9 +294,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -356,9 +312,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -373,13 +327,10 @@
     "id": "9ee6696c-f252-4cd4-9680-79d39ba494ba",
     "createdAt": "2026-01-31T19:21:28.839Z",
     "name": "Battle Waggon ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "Other",
-    "tags": [
-      "Vehicle",
-      "Print"
-    ],
+    "tags": ["Vehicle", "Print"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -394,12 +345,10 @@
     "id": "cbf39451-375b-4ac0-a7eb-2c9253e12efa",
     "createdAt": "2026-01-31T19:24:13.835Z",
     "name": "Ork Trike",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Vehicle"
-    ],
+    "tags": ["Vehicle"],
     "count": 2,
     "painted": false,
     "assembled": true,
@@ -414,13 +363,10 @@
     "id": "6a2515f8-d5a8-4d00-9238-ea0ed4519161",
     "createdAt": "2026-01-31T19:29:33.242Z",
     "name": "Ork Boyz",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 36,
     "painted": false,
     "assembled": true,
@@ -438,10 +384,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "HQ",
-      "Metal"
-    ],
+    "tags": ["HQ", "Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -459,10 +402,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Plastic Crack"
-    ],
+    "tags": ["Vehicle", "Plastic Crack"],
     "count": 3,
     "painted": false,
     "assembled": true,
@@ -480,10 +420,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Metal"
-    ],
+    "tags": ["Vehicle", "Metal"],
     "count": 2,
     "painted": true,
     "assembled": true,
@@ -501,10 +438,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle",
-      "Plastic Crack"
-    ],
+    "tags": ["Vehicle", "Plastic Crack"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -522,10 +456,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal",
-      "Battleline"
-    ],
+    "tags": ["Metal", "Battleline"],
     "count": 39,
     "painted": true,
     "assembled": true,
@@ -543,9 +474,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 3,
     "painted": true,
     "assembled": true,
@@ -563,9 +492,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -583,9 +510,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -603,9 +528,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -623,9 +546,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 5,
     "painted": true,
     "assembled": true,
@@ -643,9 +564,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 5,
     "painted": true,
     "assembled": true,
@@ -663,9 +582,7 @@
     "system": "Warhammer 40,000",
     "faction": "Orks",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 11,
     "painted": true,
     "assembled": true,
@@ -680,12 +597,10 @@
     "id": "e6477700-8b79-4e65-8a1d-06a6815bc03c",
     "createdAt": "2026-01-31T20:03:43.844Z",
     "name": "Ork Trike ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Vehicle"
-    ],
+    "tags": ["Vehicle"],
     "count": 2,
     "painted": false,
     "assembled": false,
@@ -700,12 +615,10 @@
     "id": "0e75de08-a2c2-4e0d-880a-89514c8befdd",
     "createdAt": "2026-01-31T20:04:46.610Z",
     "name": "Ork Tank",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "MyDad",
-    "tags": [
-      "Vehicle"
-    ],
+    "tags": ["Vehicle"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -720,13 +633,10 @@
     "id": "afc2ae75-37e5-4c96-9679-4e57c29c6bd1",
     "createdAt": "2026-01-31T20:09:46.380Z",
     "name": "Boys on sprew",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 54,
     "painted": false,
     "assembled": false,
@@ -741,13 +651,10 @@
     "id": "05f8d983-1a64-4f96-b2ca-64ec5a3764b4",
     "createdAt": "2026-01-31T20:12:18.219Z",
     "name": "Orc Boyz on sprew ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Plastic Crack",
-      "Battleline"
-    ],
+    "tags": ["Plastic Crack", "Battleline"],
     "count": 24,
     "painted": false,
     "assembled": false,
@@ -765,10 +672,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 105,
     "painted": true,
     "assembled": true,
@@ -806,9 +710,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "HQ"
-    ],
+    "tags": ["HQ"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -824,13 +726,10 @@
     "id": "06d75635-6b4f-4b0d-a745-c2778fe4b29e",
     "createdAt": "2026-01-31T21:13:42.946Z",
     "name": "Elven Mage",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Elves",
     "manufacturer": "Other",
-    "tags": [
-      "HQ",
-      "Metal"
-    ],
+    "tags": ["HQ", "Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -845,13 +744,10 @@
     "id": "b951e742-b1a5-4f6d-8d12-4b642f7c1f1f",
     "createdAt": "2026-01-31T21:18:51.643Z",
     "name": "Elven King ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Elves",
     "manufacturer": "Other",
-    "tags": [
-      "HQ",
-      "Metal"
-    ],
+    "tags": ["HQ", "Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -866,13 +762,10 @@
     "id": "79f24564-78fb-4391-b659-a9c71d18ac23",
     "createdAt": "2026-01-31T21:20:59.852Z",
     "name": "Elven Archers",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Wood Elves",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 16,
     "painted": false,
     "assembled": true,
@@ -891,10 +784,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "HQ",
-      "Metal"
-    ],
+    "tags": ["HQ", "Metal"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -913,9 +803,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "HQ"
-    ],
+    "tags": ["HQ"],
     "count": 1,
     "painted": true,
     "assembled": false,
@@ -934,9 +822,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -955,9 +841,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -976,9 +860,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 4,
     "painted": false,
     "assembled": true,
@@ -997,9 +879,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1018,10 +898,7 @@
     "system": "Warhammer 40,000",
     "faction": "Demons",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 10,
     "painted": false,
     "assembled": false,
@@ -1039,10 +916,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Plastic Crack",
-      "Battleline"
-    ],
+    "tags": ["Plastic Crack", "Battleline"],
     "count": 35,
     "painted": false,
     "assembled": true,
@@ -1061,10 +935,7 @@
     "system": "Kings of War",
     "faction": "Wood Elves",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Battleline",
-      "Metal"
-    ],
+    "tags": ["Battleline", "Metal"],
     "count": 8,
     "painted": false,
     "assembled": false,
@@ -1083,9 +954,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 4,
     "painted": false,
     "assembled": true,
@@ -1104,9 +973,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 10,
     "painted": false,
     "assembled": true,
@@ -1125,10 +992,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 128,
     "painted": false,
     "assembled": true,
@@ -1144,13 +1008,10 @@
     "id": "6071f101-c959-4c3b-bb89-32424d4b52a6",
     "createdAt": "2026-02-01T08:36:38.039Z",
     "name": "Archon",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "HQ",
-      "Resin"
-    ],
+    "tags": ["HQ", "Resin"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -1166,12 +1027,10 @@
     "id": "d2cdda5c-a9b6-420f-b5d0-c7aa2ae72909",
     "createdAt": "2026-02-01T08:50:07.220Z",
     "name": "Nightmares",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 5,
     "painted": true,
     "assembled": true,
@@ -1187,13 +1046,10 @@
     "id": "d5579a1d-53fd-4623-83af-2fc313acfb0f",
     "createdAt": "2026-02-01T08:51:08.691Z",
     "name": "Archon",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "HQ",
-      "Print"
-    ],
+    "tags": ["HQ", "Print"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1209,12 +1065,10 @@
     "id": "e6107232-4f56-4bfe-ac03-273e5f86d1c4",
     "createdAt": "2026-02-01T08:53:29.698Z",
     "name": "Dark Elf Warriors ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Battleline"
-    ],
+    "tags": ["Battleline"],
     "count": 10,
     "painted": false,
     "assembled": true,
@@ -1230,13 +1084,10 @@
     "id": "a8ae11ae-2df3-4bbc-8fe3-d29716c0bfe1",
     "createdAt": "2026-02-01T08:54:19.577Z",
     "name": "Pain Engine",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Monster",
-      "Print"
-    ],
+    "tags": ["Monster", "Print"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1252,13 +1103,10 @@
     "id": "bba49f30-a0ef-427c-b559-e5a83ceed2cb",
     "createdAt": "2026-02-01T08:57:46.069Z",
     "name": "Dark Elf Warriors ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Battleline",
-      "Resin"
-    ],
+    "tags": ["Battleline", "Resin"],
     "count": 20,
     "painted": true,
     "assembled": true,
@@ -1274,12 +1122,10 @@
     "id": "77ea95ab-9485-4e40-829c-398270fa616b",
     "createdAt": "2026-02-01T09:00:52.282Z",
     "name": "Wyches",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "One Page Rules",
-    "tags": [
-      "Battleline"
-    ],
+    "tags": ["Battleline"],
     "count": 10,
     "painted": false,
     "assembled": true,
@@ -1295,12 +1141,10 @@
     "id": "90460b4a-59e7-4bea-8de5-055274761b28",
     "createdAt": "2026-02-01T09:03:30.884Z",
     "name": "Wyches",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Battleline"
-    ],
+    "tags": ["Battleline"],
     "count": 10,
     "painted": false,
     "assembled": true,
@@ -1316,13 +1160,10 @@
     "id": "81c43cda-efe7-4c3c-afe3-a99eae6ee73f",
     "createdAt": "2026-02-01T09:04:43.766Z",
     "name": "Succubus ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "HQ",
-      "Resin"
-    ],
+    "tags": ["HQ", "Resin"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1338,13 +1179,10 @@
     "id": "d0da7545-450c-408c-a9be-d0a12e412e60",
     "createdAt": "2026-02-01T09:06:17.314Z",
     "name": "Tantalus",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Vehicle",
-      "Print"
-    ],
+    "tags": ["Vehicle", "Print"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1360,12 +1198,10 @@
     "id": "556e7f2b-15cb-4d79-a38e-3aa868ec9cbe",
     "createdAt": "2026-02-01T09:08:14.020Z",
     "name": "Raider",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle"
-    ],
+    "tags": ["Vehicle"],
     "count": 3,
     "painted": true,
     "assembled": true,
@@ -1381,12 +1217,10 @@
     "id": "2827afe2-556e-421e-bbea-276a5cf6f016",
     "createdAt": "2026-02-01T09:13:05.204Z",
     "name": "Venom",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Vehicle"
-    ],
+    "tags": ["Vehicle"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -1402,13 +1236,10 @@
     "id": "dba53bf9-2b78-456a-a96e-8b5b8ba707ce",
     "createdAt": "2026-02-01T09:14:13.914Z",
     "name": "Jetbike",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Vehicle",
-      "Print"
-    ],
+    "tags": ["Vehicle", "Print"],
     "count": 7,
     "painted": false,
     "assembled": true,
@@ -1424,7 +1255,7 @@
     "id": "60bf2079-be53-4d4a-a02c-b6ad5fab792d",
     "createdAt": "2026-02-01T09:18:03.385Z",
     "name": "Venom",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Games Workshop",
     "tags": [],
@@ -1443,12 +1274,10 @@
     "id": "79f86151-f934-4b5b-b886-8a24c4449a9e",
     "createdAt": "2026-02-01T09:23:32.425Z",
     "name": "Ravager",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Vehicle"
-    ],
+    "tags": ["Vehicle"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -1464,13 +1293,10 @@
     "id": "3df22b6c-087d-446d-ad3d-5e98f8932ff2",
     "createdAt": "2026-02-01T09:26:03.788Z",
     "name": "Gene Brutes",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Monster",
-      "Print"
-    ],
+    "tags": ["Monster", "Print"],
     "count": 3,
     "painted": false,
     "assembled": true,
@@ -1486,12 +1312,10 @@
     "id": "c91d5853-1bc2-414c-bf98-336528070c5f",
     "createdAt": "2026-02-01T09:26:37.002Z",
     "name": "Snake lady ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Print"
-    ],
+    "tags": ["Print"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -1507,13 +1331,10 @@
     "id": "218678b5-7b67-459f-9280-868c56182344",
     "createdAt": "2026-02-01T09:29:36.992Z",
     "name": "Wracks ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Battleline",
-      "Resin"
-    ],
+    "tags": ["Battleline", "Resin"],
     "count": 10,
     "painted": false,
     "assembled": true,
@@ -1529,13 +1350,10 @@
     "id": "085347d7-8721-485d-84d3-66334037099b",
     "createdAt": "2026-02-01T09:30:42.048Z",
     "name": "Dark Elf Warriors",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Battleline",
-      "Print"
-    ],
+    "tags": ["Battleline", "Print"],
     "count": 5,
     "painted": false,
     "assembled": false,
@@ -1551,13 +1369,10 @@
     "id": "4a5dfec5-88fa-4cfa-ac16-b299a1f070a3",
     "createdAt": "2026-02-01T09:31:59.866Z",
     "name": "Hoverboard Riders",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Battleline",
-      "Print"
-    ],
+    "tags": ["Battleline", "Print"],
     "count": 5,
     "painted": false,
     "assembled": true,
@@ -1573,12 +1388,10 @@
     "id": "0e51b3e4-df66-4c0d-817b-c715194dfdde",
     "createdAt": "2026-02-01T09:33:29.740Z",
     "name": "Winged Warrior ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Print"
-    ],
+    "tags": ["Print"],
     "count": 5,
     "painted": false,
     "assembled": true,
@@ -1594,13 +1407,10 @@
     "id": "3cd1a17a-a45d-4fe7-b554-16682f7f5f53",
     "createdAt": "2026-02-01T09:35:39.939Z",
     "name": "Gene tech master",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "HQ",
-      "Resin"
-    ],
+    "tags": ["HQ", "Resin"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1616,12 +1426,10 @@
     "id": "c760a96e-5a3d-4fae-9ee0-acd54205792d",
     "createdAt": "2026-02-01T09:36:33.858Z",
     "name": "Nightmares ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 5,
     "painted": false,
     "assembled": false,
@@ -1637,12 +1445,10 @@
     "id": "3c6e1090-74f7-4019-891e-76d6d51c243c",
     "createdAt": "2026-02-01T09:38:00.757Z",
     "name": "Nightmares ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 5,
     "painted": false,
     "assembled": true,
@@ -1658,13 +1464,10 @@
     "id": "ca583171-472a-49f5-9b99-4411244765f4",
     "createdAt": "2026-02-01T09:38:56.007Z",
     "name": "Succubus ",
-    "system": "OPR",
+    "system": "OPR:GDF",
     "faction": "Dark Elves",
     "manufacturer": "Raging Heroes",
-    "tags": [
-      "HQ",
-      "Resin"
-    ],
+    "tags": ["HQ", "Resin"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1683,9 +1486,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Monster"
-    ],
+    "tags": ["Monster"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1704,9 +1505,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "HQ"
-    ],
+    "tags": ["HQ"],
     "count": 1,
     "painted": true,
     "assembled": true,
@@ -1725,9 +1524,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Monster"
-    ],
+    "tags": ["Monster"],
     "count": 2,
     "painted": true,
     "assembled": true,
@@ -1746,9 +1543,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -1767,10 +1562,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "HQ",
-      "Metal"
-    ],
+    "tags": ["HQ", "Metal"],
     "count": 1,
     "painted": true,
     "assembled": false,
@@ -1789,9 +1581,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Monster"
-    ],
+    "tags": ["Monster"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -1810,9 +1600,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 3,
     "painted": false,
     "assembled": false,
@@ -1850,9 +1638,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 5,
     "painted": true,
     "assembled": true,
@@ -1871,9 +1657,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 2,
     "painted": true,
     "assembled": true,
@@ -1892,9 +1676,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 2,
     "painted": true,
     "assembled": true,
@@ -1913,9 +1695,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -1934,10 +1714,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Monster",
-      "Metal"
-    ],
+    "tags": ["Monster", "Metal"],
     "count": 3,
     "painted": false,
     "assembled": false,
@@ -1956,10 +1733,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Monster",
-      "Metal"
-    ],
+    "tags": ["Monster", "Metal"],
     "count": 2,
     "painted": false,
     "assembled": false,
@@ -1978,9 +1752,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 3,
     "painted": false,
     "assembled": false,
@@ -1999,9 +1771,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 2,
     "painted": false,
     "assembled": true,
@@ -2020,9 +1790,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -2041,9 +1809,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 6,
     "painted": false,
     "assembled": false,
@@ -2062,9 +1828,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 8,
     "painted": false,
     "assembled": false,
@@ -2083,9 +1847,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 21,
     "painted": true,
     "assembled": true,
@@ -2104,9 +1866,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 14,
     "painted": false,
     "assembled": false,
@@ -2125,9 +1885,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 10,
     "painted": true,
     "assembled": true,
@@ -2146,9 +1904,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 21,
     "painted": true,
     "assembled": true,
@@ -2167,10 +1923,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 16,
     "painted": false,
     "assembled": true,
@@ -2189,10 +1942,7 @@
     "system": "Kings of War",
     "faction": "Human",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin",
-      "Battleline"
-    ],
+    "tags": ["Resin", "Battleline"],
     "count": 5,
     "painted": false,
     "assembled": false,
@@ -2211,10 +1961,7 @@
     "system": "Kings of War",
     "faction": "Human",
     "manufacturer": "Mantic",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 15,
     "painted": false,
     "assembled": false,
@@ -2233,9 +1980,7 @@
     "system": "Kings of War",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -2254,9 +1999,7 @@
     "system": "Kings of War",
     "faction": "Ogres",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 2,
     "painted": false,
     "assembled": false,
@@ -2275,10 +2018,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Plastic Crack",
-      "Battleline"
-    ],
+    "tags": ["Plastic Crack", "Battleline"],
     "count": 10,
     "painted": false,
     "assembled": false,
@@ -2297,9 +2037,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 10,
     "painted": false,
     "assembled": false,
@@ -2318,9 +2056,7 @@
     "system": "Kings of War",
     "faction": "Chaos Dwarfs",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -2339,9 +2075,7 @@
     "system": "Kings of War",
     "faction": "Human",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 5,
     "painted": false,
     "assembled": false,
@@ -2360,9 +2094,7 @@
     "system": "Kings of War",
     "faction": "Human",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 5,
     "painted": false,
     "assembled": false,
@@ -2381,9 +2113,7 @@
     "system": "Kings of War",
     "faction": "Human",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 25,
     "painted": false,
     "assembled": false,
@@ -2402,10 +2132,7 @@
     "system": "Kings of War",
     "faction": "Vampire",
     "manufacturer": "Mantic",
-    "tags": [
-      "HQ",
-      "Resin"
-    ],
+    "tags": ["HQ", "Resin"],
     "count": 1,
     "painted": false,
     "assembled": true,
@@ -2424,9 +2151,7 @@
     "system": "Kings of War",
     "faction": "Elves",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 15,
     "painted": false,
     "assembled": false,
@@ -2445,9 +2170,7 @@
     "system": "Kings of War",
     "faction": "Angels",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 3,
     "painted": false,
     "assembled": false,
@@ -2466,9 +2189,7 @@
     "system": "Kings of War",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Metal"
-    ],
+    "tags": ["Metal"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -2487,9 +2208,7 @@
     "system": "Kings of War",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 1,
     "painted": false,
     "assembled": false,
@@ -2508,9 +2227,7 @@
     "system": "Kings of War",
     "faction": "Goblins",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 20,
     "painted": false,
     "assembled": false,
@@ -2529,9 +2246,7 @@
     "system": "Kings of War",
     "faction": "Goblins",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 9,
     "painted": false,
     "assembled": false,
@@ -2550,9 +2265,7 @@
     "system": "Kings of War",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Resin"
-    ],
+    "tags": ["Resin"],
     "count": 10,
     "painted": false,
     "assembled": false,
@@ -2571,9 +2284,7 @@
     "system": "Kings of War",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Plastic Crack"
-    ],
+    "tags": ["Plastic Crack"],
     "count": 20,
     "painted": false,
     "assembled": false,
@@ -2592,10 +2303,7 @@
     "system": "Kings of War",
     "faction": "Orks",
     "manufacturer": "Mantic",
-    "tags": [
-      "Battleline",
-      "Plastic Crack"
-    ],
+    "tags": ["Battleline", "Plastic Crack"],
     "count": 66,
     "painted": false,
     "assembled": false,
@@ -2614,10 +2322,7 @@
     "system": "Warhammer 40,000",
     "faction": "Tyranids",
     "manufacturer": "Games Workshop",
-    "tags": [
-      "Monster",
-      "Plastic Crack"
-    ],
+    "tags": ["Monster", "Plastic Crack"],
     "count": 1,
     "painted": false,
     "assembled": true,

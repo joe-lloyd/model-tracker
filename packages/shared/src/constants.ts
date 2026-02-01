@@ -1,5 +1,6 @@
 export const SYSTEMS = [
-  "OPR",
+  "OPR:GDF",
+  "OPR:AOF",
   "Kings of War",
   "Warhammer 40,000",
   "Blood Bowl",
