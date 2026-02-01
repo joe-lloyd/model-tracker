@@ -2905,5 +2905,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769964230/mini-vault/rwwdg6juntepayrcpy4m.jpg"
     ]
+  },
+  {
+    "id": "e71cc1ae-4e84-4950-ad4a-89e17bd9c9f3",
+    "createdAt": "2026-02-01T16:45:55.110Z",
+    "name": "Dark Elf Warriors ",
+    "system": "OPR:AOF",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Battleline",
+      "Resin"
+    ],
+    "count": 10,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769964353/mini-vault/ooofom17vmvcwkjjr0fk.jpg"
+    ]
   }
 ]
