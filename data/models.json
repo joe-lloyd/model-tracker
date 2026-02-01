@@ -1969,5 +1969,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945297/mini-vault/myxzbf3vbjyv9l86hoy9.jpg"
     ]
+  },
+  {
+    "id": "2c803f0d-6e42-40b6-9a4e-758e0fbd981e",
+    "createdAt": "2026-02-01T11:29:29.187Z",
+    "name": "Tyranid Warriors",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945368/mini-vault/fz6xkcrjadvrwle0mr7p.jpg"
+    ]
   }
 ]
