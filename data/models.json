@@ -2520,5 +2520,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769956672/mini-vault/eb2pscty5npogybszoxd.jpg"
     ]
+  },
+  {
+    "id": "f4ac9b5d-4573-4e6e-89f1-8d9ca85c6856",
+    "createdAt": "2026-02-01T14:39:01.886Z",
+    "name": "Trolls",
+    "system": "Kings of War",
+    "faction": "Goblins",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 9,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769956740/mini-vault/pqmxp0dgqkbji0k6ocfk.jpg"
+    ]
   }
 ]
