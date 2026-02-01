@@ -1716,5 +1716,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769943914/mini-vault/uzavt5fwcyytppsazsek.jpg"
     ]
+  },
+  {
+    "id": "cc92e07a-cbc2-4625-aa61-57a8e7f6afb5",
+    "createdAt": "2026-02-01T11:07:18.293Z",
+    "name": "Old school Zoanthrope ",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Monster"
+    ],
+    "count": 2,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944036/mini-vault/fdyetlceuh4nkbu9hr9n.jpg"
+    ]
   }
 ]
