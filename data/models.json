@@ -1224,5 +1224,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769936008/mini-vault/tabgo2n5gfxdko5wpwvy.jpg"
     ]
+  },
+  {
+    "id": "a8ae11ae-2df3-4bbc-8fe3-d29716c0bfe1",
+    "createdAt": "2026-02-01T08:54:19.577Z",
+    "name": "Pain Engine",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Monster",
+      "Print"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769936058/mini-vault/cgxibxkllburei0r21bv.jpg"
+    ]
   }
 ]
