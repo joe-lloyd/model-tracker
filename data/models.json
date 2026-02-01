@@ -2841,5 +2841,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963839/mini-vault/rx7j74wv2u8hbj6xsggz.jpg"
     ]
+  },
+  {
+    "id": "7318860b-8e13-4a81-8aa3-49c8ac916af5",
+    "createdAt": "2026-02-01T16:38:34.813Z",
+    "name": "Chaos Space Marine with Heavy weapon ",
+    "system": "OPR:GDF",
+    "faction": "Chaos Space Marines",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Print"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963913/mini-vault/haqfp4cxw2ggsdpawhpw.jpg"
+    ]
   }
 ]
