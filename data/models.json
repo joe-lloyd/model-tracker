@@ -1567,5 +1567,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938318/mini-vault/mslh2i8yppodgyloxmoc.jpg"
     ]
+  },
+  {
+    "id": "0e51b3e4-df66-4c0d-817b-c715194dfdde",
+    "createdAt": "2026-02-01T09:33:29.740Z",
+    "name": "Winged Warrior ",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Print"
+    ],
+    "count": 5,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938408/mini-vault/qyzsimpqybe34jg1qdfe.jpg"
+    ]
   }
 ]
