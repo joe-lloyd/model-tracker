@@ -455,7 +455,7 @@ export function ModelForm({
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300 accent-primary"
+            className="w-5 h-5 rounded border-gray-400 accent-green-600 cursor-pointer"
             {...register("assembled")}
           />
           <span>Assembled</span>
@@ -463,7 +463,7 @@ export function ModelForm({
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300 accent-primary"
+            className="w-5 h-5 rounded border-gray-400 accent-green-600 cursor-pointer"
             {...register("primed")}
           />
           <span>Primed</span>
@@ -471,7 +471,7 @@ export function ModelForm({
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300 accent-primary"
+            className="w-5 h-5 rounded border-gray-400 accent-green-600 cursor-pointer"
             {...register("painted")}
           />
           <span>Painted</span>
@@ -479,7 +479,7 @@ export function ModelForm({
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
-            className="w-5 h-5 rounded border-gray-300 accent-primary"
+            className="w-5 h-5 rounded border-gray-400 accent-green-600 cursor-pointer"
             {...register("based")}
           />
           <span>Based</span>
