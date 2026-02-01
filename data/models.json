@@ -2756,5 +2756,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963493/mini-vault/txgvdjs0xnqgfunluxf4.jpg"
     ]
+  },
+  {
+    "id": "d7e7157c-0b42-40c3-b2cc-14d3affc95fa",
+    "createdAt": "2026-02-01T16:33:41.011Z",
+    "name": "Chaos Cultists ",
+    "system": "OPR:GDF",
+    "faction": "Chaos Space Marines",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Print"
+    ],
+    "count": 3,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963618/mini-vault/bdfpnlzktvwasjltdr4o.jpg"
+    ]
   }
 ]
