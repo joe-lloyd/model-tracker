@@ -1480,5 +1480,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937962/mini-vault/rzercinnmxreewyvaork.jpg"
     ]
+  },
+  {
+    "id": "c91d5853-1bc2-414c-bf98-336528070c5f",
+    "createdAt": "2026-02-01T09:26:37.002Z",
+    "name": "Snake lady ",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Print"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937995/mini-vault/stj9gemoqwhdsx91u9o4.jpg"
+    ]
   }
 ]
