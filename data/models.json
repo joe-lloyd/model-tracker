@@ -1418,5 +1418,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937252/mini-vault/kdpfclvytxlmynuesskm.jpg"
     ]
+  },
+  {
+    "id": "60bf2079-be53-4d4a-a02c-b6ad5fab792d",
+    "createdAt": "2026-02-01T09:18:03.385Z",
+    "name": "Venom",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Games Workshop",
+    "tags": [],
+    "count": 3,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937482/mini-vault/uz7txohmdkytt4fiwpsz.jpg"
+    ]
   }
 ]
