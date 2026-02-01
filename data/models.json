@@ -2820,5 +2820,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963783/mini-vault/nfsjvzxzzru1kdgz7bip.jpg"
     ]
+  },
+  {
+    "id": "1dccaa35-5ff7-4ffc-a9ab-d3d9b8c0c2b6",
+    "createdAt": "2026-02-01T16:37:21.000Z",
+    "name": "Chaos Terminators ",
+    "system": "OPR:GDF",
+    "faction": "Chaos Space Marines",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Print"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963839/mini-vault/rx7j74wv2u8hbj6xsggz.jpg"
+    ]
   }
 ]
