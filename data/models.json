@@ -2245,5 +2245,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954152/mini-vault/un0oobb06umlbsdfumq9.jpg"
     ]
+  },
+  {
+    "id": "c4f12dc3-8cbb-40b6-9ed9-dadc12bc3ec8",
+    "createdAt": "2026-02-01T13:58:36.995Z",
+    "name": "Ogre",
+    "system": "Kings of War",
+    "faction": "Ogres",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 2,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": []
   }
 ]
