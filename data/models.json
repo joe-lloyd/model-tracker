@@ -2970,5 +2970,28 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769964578/mini-vault/ef6bu5llj0t3oitlvfrt.jpg"
     ]
+  },
+  {
+    "id": "f6318486-2ac1-4151-a8a4-1e5d0a0ba0cc",
+    "createdAt": "2026-02-01T16:51:41.900Z",
+    "name": "Avatar Queen",
+    "system": "OPR:AOF",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "HQ",
+      "Monster",
+      "Resin"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769964700/mini-vault/gxcohj2o1fqv5wbdm9na.jpg"
+    ]
   }
 ]
