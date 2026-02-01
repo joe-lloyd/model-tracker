@@ -1289,5 +1289,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769936451/mini-vault/gdy0bzbisrzipbhcfrza.jpg"
     ]
+  },
+  {
+    "id": "90460b4a-59e7-4bea-8de5-055274761b28",
+    "createdAt": "2026-02-01T09:03:30.884Z",
+    "name": "Wyches",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Battleline"
+    ],
+    "count": 10,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769936609/mini-vault/fb93ulxfhcmesfhju931.jpg"
+    ]
   }
 ]
