@@ -2927,5 +2927,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769964353/mini-vault/ooofom17vmvcwkjjr0fk.jpg"
     ]
+  },
+  {
+    "id": "ab3f0617-5f3d-4416-8683-8434c587c973",
+    "createdAt": "2026-02-01T16:46:57.679Z",
+    "name": "Spider Queen",
+    "system": "OPR:AOF",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "HQ",
+      "Resin"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769964416/mini-vault/pdemqwuevgiorxubv3wr.jpg"
+    ]
   }
 ]
