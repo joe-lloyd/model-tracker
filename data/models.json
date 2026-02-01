@@ -3270,5 +3270,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769968104/mini-vault/h8dn1ifq4vwdncjli4s3.jpg"
     ]
+  },
+  {
+    "id": "4341bb0e-56ed-464b-af32-859bacb3e924",
+    "createdAt": "2026-02-01T17:49:28.423Z",
+    "name": "Royal Wrecker ",
+    "system": "Relic Knights ",
+    "faction": "RK",
+    "manufacturer": "Cool Mini or Not",
+    "tags": [],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769968167/mini-vault/rfaouk6vtovm3s0vdzbw.jpg"
+    ]
   }
 ]
