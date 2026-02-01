@@ -1947,5 +1947,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945223/mini-vault/pvteihigurolbrtr0ltm.jpg"
     ]
+  },
+  {
+    "id": "5ad64cfc-d2f4-4960-9612-2197e7e00e9a",
+    "createdAt": "2026-02-01T11:28:18.545Z",
+    "name": "Old school lictors",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Monster",
+      "Metal"
+    ],
+    "count": 2,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945297/mini-vault/myxzbf3vbjyv9l86hoy9.jpg"
+    ]
   }
 ]
