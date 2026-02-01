@@ -3394,5 +3394,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769968669/mini-vault/fx1saka3ohhjabxqzzjd.jpg"
     ]
+  },
+  {
+    "id": "b389ea1d-c89a-4407-b586-3f4b02e5180a",
+    "createdAt": "2026-02-01T18:00:12.372Z",
+    "name": "Candy & Cola ",
+    "system": "Relic Knights ",
+    "faction": "RK",
+    "manufacturer": "Cool Mini or Not",
+    "tags": [],
+    "count": 2,
+    "painted": false,
+    "assembled": false,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769968810/mini-vault/brdl7sssnz0uatjtbqsl.jpg"
+    ]
   }
 ]
