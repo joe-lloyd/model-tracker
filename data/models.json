@@ -2351,5 +2351,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954583/mini-vault/m49xmply1k0inkvyba8f.jpg"
     ]
+  },
+  {
+    "id": "6ac5e97b-9e32-4621-945f-9439b2941139",
+    "createdAt": "2026-02-01T14:07:02.233Z",
+    "name": "Human female Panther riders",
+    "system": "Kings of War",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 5,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954821/mini-vault/lq4i1kqpmfjeerggmxez.jpg"
+    ]
   }
 ]
