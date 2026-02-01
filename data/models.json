@@ -2415,5 +2415,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769955382/mini-vault/rormxm3wwo4fqiyf9j0e.jpg"
     ]
+  },
+  {
+    "id": "5be0ffb1-2c56-4c19-9d02-4b16ccf72624",
+    "createdAt": "2026-02-01T14:18:23.628Z",
+    "name": "Elven Elite Warriors",
+    "system": "Kings of War",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 15,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769955502/mini-vault/iepdvpcueiug2x9mmfa6.jpg"
+    ]
   }
 ]
