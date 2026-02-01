@@ -2862,5 +2862,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963913/mini-vault/haqfp4cxw2ggsdpawhpw.jpg"
     ]
+  },
+  {
+    "id": "a57938d2-7637-4b8d-8e8a-ec6583dbc605",
+    "createdAt": "2026-02-01T16:42:16.038Z",
+    "name": "Raptor Chariot ",
+    "system": "OPR:AOF",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Resin"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769964133/mini-vault/b9sgtpcjg2q6wdrvcfk7.jpg"
+    ]
   }
 ]
