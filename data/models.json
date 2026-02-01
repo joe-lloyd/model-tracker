@@ -1862,5 +1862,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944968/mini-vault/zbei4qsnrvj28txhcw48.jpg"
     ]
+  },
+  {
+    "id": "728269da-7f2b-42e9-aeec-55f679d61e49",
+    "createdAt": "2026-02-01T11:23:47.545Z",
+    "name": "Ripper Swarms",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 2,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945026/mini-vault/uapctgx8zxzrgyqgiomb.jpg"
+    ]
   }
 ]
