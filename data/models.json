@@ -2605,5 +2605,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769957122/mini-vault/ih3rjkjk3nxnkrqd7yxe.jpg"
     ]
+  },
+  {
+    "id": "f7ff14a3-f135-49d1-aae5-c7aa8c5ef725",
+    "createdAt": "2026-02-01T14:49:28.909Z",
+    "name": "Trygon",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Monster",
+      "Plastic Crack"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769957367/mini-vault/j7dfdoxn6xkbzehhtllk.jpg"
+    ]
   }
 ]
