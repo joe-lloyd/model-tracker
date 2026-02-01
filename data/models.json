@@ -2798,5 +2798,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963686/mini-vault/g8cr3akf1mkwbjykglot.jpg"
     ]
+  },
+  {
+    "id": "9d530ea7-afe0-4375-95e1-7f8299f25243",
+    "createdAt": "2026-02-01T16:36:24.376Z",
+    "name": "Chaos Space Marine Which",
+    "system": "OPR:GDF",
+    "faction": "Chaos Space Marines",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "HQ",
+      "Print"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769963783/mini-vault/nfsjvzxzzru1kdgz7bip.jpg"
+    ]
   }
 ]
