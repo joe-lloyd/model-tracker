@@ -2224,5 +2224,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954049/mini-vault/bd6xevznrk06voer30u5.jpg"
     ]
+  },
+  {
+    "id": "91174a5b-6e4f-4e8f-a3bd-044c167b38e7",
+    "createdAt": "2026-02-01T13:55:54.093Z",
+    "name": "Ork Mage",
+    "system": "Kings of War",
+    "faction": "Orks",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954152/mini-vault/un0oobb06umlbsdfumq9.jpg"
+    ]
   }
 ]
