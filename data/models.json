@@ -2074,5 +2074,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945760/mini-vault/szjhy9x5kairawt3vhlp.jpg"
     ]
+  },
+  {
+    "id": "fa05977a-ffb7-40cb-ae6e-f3b12d7c5e79",
+    "createdAt": "2026-02-01T11:45:01.653Z",
+    "name": "Spore mine",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 21,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769946299/mini-vault/b87aivzio4lqi8oupg0c.jpg"
+    ]
   }
 ]
