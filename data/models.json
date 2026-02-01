@@ -2202,5 +2202,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769953965/mini-vault/h1j0cpocfbww1viezv82.jpg"
     ]
+  },
+  {
+    "id": "09f56123-39a7-43cb-89ad-7e3cfe398029",
+    "createdAt": "2026-02-01T13:54:10.750Z",
+    "name": "Human Warriors",
+    "system": "Kings of War",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Battleline",
+      "Plastic Crack"
+    ],
+    "count": 15,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769954049/mini-vault/bd6xevznrk06voer30u5.jpg"
+    ]
   }
 ]
