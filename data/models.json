@@ -1990,5 +1990,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945368/mini-vault/fz6xkcrjadvrwle0mr7p.jpg"
     ]
+  },
+  {
+    "id": "15253434-1f86-4569-bfa3-16194ab3b275",
+    "createdAt": "2026-02-01T11:31:08.042Z",
+    "name": "Old school Hive Guardian",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 2,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945466/mini-vault/doakahpsp3rrovmyvjbd.jpg"
+    ]
   }
 ]
