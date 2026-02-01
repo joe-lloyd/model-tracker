@@ -2011,5 +2011,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945466/mini-vault/doakahpsp3rrovmyvjbd.jpg"
     ]
+  },
+  {
+    "id": "6bb43f60-e173-4ace-a348-63468dd91e95",
+    "createdAt": "2026-02-01T11:31:53.738Z",
+    "name": "Hive guardian ",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769945512/mini-vault/ydiuae60xoctwzuxhqcu.jpg"
+    ]
   }
 ]
