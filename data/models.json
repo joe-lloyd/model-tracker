@@ -1780,5 +1780,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944172/mini-vault/nnzj95pkkjtxzohuys2d.jpg"
     ]
+  },
+  {
+    "id": "12b71cb8-a83b-4534-8288-0452ce81f5a5",
+    "createdAt": "2026-02-01T11:10:35.707Z",
+    "name": "Red terror",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Monster"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944234/mini-vault/hhst4b6uxhuscalffryx.jpg"
+    ]
   }
 ]
