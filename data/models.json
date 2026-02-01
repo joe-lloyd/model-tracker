@@ -1737,5 +1737,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944036/mini-vault/fdyetlceuh4nkbu9hr9n.jpg"
     ]
+  },
+  {
+    "id": "1ad399dd-24c6-4e07-b5fe-9f6c4012474d",
+    "createdAt": "2026-02-01T11:08:13.979Z",
+    "name": "Zoanthrope ",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Metal"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944092/mini-vault/xxgco6wr3d9a8bb9hhdu.jpg"
+    ]
   }
 ]
