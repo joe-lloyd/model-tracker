@@ -1801,5 +1801,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944234/mini-vault/hhst4b6uxhuscalffryx.jpg"
     ]
+  },
+  {
+    "id": "536b748a-f649-4334-83ac-0353c9608637",
+    "createdAt": "2026-02-01T11:19:43.555Z",
+    "name": "Gene stealers",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769944781/mini-vault/yyfao691sczsrddwyfgk.jpg"
+    ]
   }
 ]
