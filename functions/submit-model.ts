@@ -1,7 +1,5 @@
 import type { Handler, HandlerEvent } from "@netlify/functions";
-import { Octokit } from "octokit";
-import { ModelInputSchema, type Model } from "../packages/shared/src/index";
-import { randomUUID } from "crypto";
+import type { Model } from "../packages/shared/src/index";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = process.env.GITHUB_REPO; // format: "owner/repo"
@@ -10,6 +8,11 @@ const MAX_RETRIES = 3;
 
 export const handler: Handler = async (event: HandlerEvent) => {
   const VAULT_KEY = process.env.VAULT_KEY;
+
+  // Dynamic Import Octokit and Shared Schema
+  const { Octokit } = await import("octokit");
+  const { ModelInputSchema } = await import("../packages/shared/src/index");
+  const { randomUUID } = await import("crypto");
 
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
