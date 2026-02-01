@@ -54,7 +54,7 @@ export const handler: Handler = async (event: HandlerEvent) => {
     const query = event.queryStringParameters || {};
     const page = parseInt(query.page || "1");
     const limit = parseInt(query.limit || "50");
-    const search = query.search?.toLowerCase() || "";
+    const search = (query.search || "").toLowerCase();
     const system = query.system || "";
     const faction = query.faction || "";
     const status = query.status || ""; // 'painted', 'assembled', 'forSale', etc.
@@ -71,7 +71,7 @@ export const handler: Handler = async (event: HandlerEvent) => {
         if (!inName && !inNotes && !inTags) return false;
       }
 
-      // Exact Filters
+      // Exact Filters (Case-insensitive match for select dropdowns)
       if (system && m.system !== system) return false;
       if (faction && m.faction !== faction) return false;
 
@@ -95,9 +95,23 @@ export const handler: Handler = async (event: HandlerEvent) => {
 
     // 4. Pagination
     const total = filtered.length;
+    // Calculate total physical models (sum of 'count' field)
+    const totalModels = filtered.reduce(
+      (sum: number, m: any) => sum + (m.count || 1),
+      0,
+    );
     const totalPages = Math.ceil(total / limit);
     const start = (page - 1) * limit;
     const paginatedData = filtered.slice(start, start + limit);
+
+    // 5. Facets (from full dataset or filtered? usually full dataset for options)
+    // We'll return all unique systems/factions to populate dropdowns
+    const uniqueSystems = Array.from(
+      new Set(models.map((m: any) => m.system).filter(Boolean)),
+    ).sort();
+    const uniqueFactions = Array.from(
+      new Set(models.map((m: any) => m.faction).filter(Boolean)),
+    ).sort();
 
     return {
       statusCode: 200,
@@ -109,9 +123,14 @@ export const handler: Handler = async (event: HandlerEvent) => {
         data: paginatedData,
         pagination: {
           total,
+          totalModels,
           page,
           limit,
           totalPages,
+        },
+        facets: {
+          systems: uniqueSystems,
+          factions: uniqueFactions,
         },
       }),
     };

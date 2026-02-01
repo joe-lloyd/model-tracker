@@ -2,40 +2,67 @@ import { useEffect, useState } from "react";
 import { type Model } from "@mini-vault/shared";
 import { Loader2, Plus, Search, Tags } from "lucide-react";
 import { Button } from "./ui";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
   /* -------------------------------------------------------------------------
    * State
    * ----------------------------------------------------------------------- */
+  // URL Params State
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const page = parseInt(searchParams.get("page") || "1");
+  const limit = parseInt(searchParams.get("limit") || "50");
+  const search = searchParams.get("search") || "";
+  const statusFilter =
+    searchParams.get("status") || (onlyForSale ? "forSale" : "");
+  const systemFilter = searchParams.get("system") || "";
+  const factionFilter = searchParams.get("faction") || "";
+
+  /* -------------------------------------------------------------------------
+   * State
+   * ----------------------------------------------------------------------- */
   const [data, setData] = useState<Model[]>([]);
-  const [pagination, setPagination] = useState({
+  const [meta, setMeta] = useState({
     total: 0,
-    page: 1,
-    limit: 50,
+    totalModels: 0,
     totalPages: 1,
   });
+  const [facets, setFacets] = useState<{
+    systems: string[];
+    factions: string[];
+  }>({ systems: [], factions: [] });
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Filters
-  const [search, setSearch] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string>(
-    onlyForSale ? "forSale" : "",
-  );
-  // Debounce search
-  const [debouncedSearch, setDebouncedSearch] = useState("");
+  // local search state for input field (debounced sync to URL)
+  const [localSearch, setLocalSearch] = useState(search);
+  const [debouncedSearch, setDebouncedSearch] = useState(search);
 
   /* -------------------------------------------------------------------------
    * Effects
    * ----------------------------------------------------------------------- */
-  // Debounce search input
+  // Debounce search input to URL
   useEffect(() => {
     const timer = setTimeout(() => {
-      setDebouncedSearch(search);
-      setPagination((prev) => ({ ...prev, page: 1 })); // Reset to page 1 on search
+      if (localSearch !== search) {
+        setSearchParams((prev) => {
+          const newParams = new URLSearchParams(prev);
+          if (localSearch) newParams.set("search", localSearch);
+          else newParams.delete("search");
+          newParams.set("page", "1"); // Reset to page 1
+          return newParams;
+        });
+      }
+      setDebouncedSearch(localSearch);
     }, 500);
     return () => clearTimeout(timer);
+  }, [localSearch, setSearchParams, search]);
+
+  // Sync local search when URL changes (e.g. back button)
+  useEffect(() => {
+    setLocalSearch(search);
   }, [search]);
 
   // Fetch Data
@@ -45,10 +72,12 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
       setError(null);
       try {
         const params = new URLSearchParams({
-          page: pagination.page.toString(),
-          limit: pagination.limit.toString(),
+          page: page.toString(),
+          limit: limit.toString(),
           search: debouncedSearch,
           status: statusFilter,
+          system: systemFilter,
+          faction: factionFilter,
         });
 
         // Add sorting or specific filters if needed in future
@@ -65,7 +94,10 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
           setData(json); // Fallback if backend not updated
         } else {
           setData(json.data);
-          setPagination(json.pagination);
+          setMeta(json.pagination);
+          if (json.facets) {
+            setFacets(json.facets);
+          }
         }
       } catch (err: any) {
         console.error("Fetch error:", err);
@@ -76,28 +108,53 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
     }
 
     fetchModels();
-  }, [debouncedSearch, statusFilter, pagination.page, pagination.limit]); // Refetch on these changes
+    fetchModels();
+  }, [debouncedSearch, statusFilter, systemFilter, factionFilter, page, limit]); // Refetch on these changes
 
   // Update status filter if prop changes (e.g. navigation)
   useEffect(() => {
-    if (onlyForSale) setStatusFilter("forSale");
-  }, [onlyForSale]);
+    if (onlyForSale && statusFilter !== "forSale") {
+      setSearchParams((prev) => {
+        const newParams = new URLSearchParams(prev);
+        newParams.set("status", "forSale");
+        return newParams;
+      });
+    }
+  }, [onlyForSale, statusFilter, setSearchParams]);
 
   /* -------------------------------------------------------------------------
    * Handlers
    * ----------------------------------------------------------------------- */
   const handleNextPage = () => {
-    if (pagination.page < pagination.totalPages) {
-      setPagination((p) => ({ ...p, page: p.page + 1 }));
+    if (page < meta.totalPages) {
+      setSearchParams((prev) => {
+        const newParams = new URLSearchParams(prev);
+        newParams.set("page", (page + 1).toString());
+        return newParams;
+      });
       window.scrollTo(0, 0);
     }
   };
 
   const handlePrevPage = () => {
-    if (pagination.page > 1) {
-      setPagination((p) => ({ ...p, page: p.page - 1 }));
+    if (page > 1) {
+      setSearchParams((prev) => {
+        const newParams = new URLSearchParams(prev);
+        newParams.set("page", (page - 1).toString());
+        return newParams;
+      });
       window.scrollTo(0, 0);
     }
+  };
+
+  const updateFilter = (key: string, value: string) => {
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev);
+      if (value) newParams.set(key, value);
+      else newParams.delete(key);
+      newParams.set("page", "1"); // Reset to page 1
+      return newParams;
+    });
   };
 
   /* -------------------------------------------------------------------------
@@ -129,20 +186,46 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
             type="text"
             placeholder="Search models, tags..."
             className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 pl-9 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            value={localSearch}
+            onChange={(e) => setLocalSearch(e.target.value)}
           />
         </div>
 
         {/* Filters */}
-        <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
+        <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto pb-2 sm:pb-0">
+          {/* System Filter */}
+          <select
+            className="h-9 rounded-md border border-input bg-background px-3 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring max-w-[150px]"
+            value={systemFilter}
+            onChange={(e) => updateFilter("system", e.target.value)}
+          >
+            <option value="">All Systems</option>
+            {facets.systems.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+
+          {/* Faction Filter */}
+          <select
+            className="h-9 rounded-md border border-input bg-background px-3 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring max-w-[150px]"
+            value={factionFilter}
+            onChange={(e) => updateFilter("faction", e.target.value)}
+          >
+            <option value="">All Factions</option>
+            {facets.factions.map((f) => (
+              <option key={f} value={f}>
+                {f}
+              </option>
+            ))}
+          </select>
+
+          {/* Status Filter */}
           <select
             className="h-9 rounded-md border border-input bg-background px-3 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             value={statusFilter}
-            onChange={(e) => {
-              setStatusFilter(e.target.value);
-              setPagination((p) => ({ ...p, page: 1 }));
-            }}
+            onChange={(e) => updateFilter("status", e.target.value)}
           >
             <option value="">All Statuses</option>
             <option value="painted">🎨 Painted</option>
@@ -175,8 +258,8 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
             <Button
               variant="link"
               onClick={() => {
-                setSearch("");
-                setStatusFilter("");
+                setSearchParams(new URLSearchParams());
+                setLocalSearch("");
               }}
             >
               Clear filters
@@ -277,25 +360,26 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
           {/* Pagination Footer */}
           <div className="flex justify-between items-center pt-4 border-t">
             <div className="text-xs text-muted-foreground">
-              Showing {data.length} of {pagination.total} models
+              Showing {data.length} of {meta.total} entries ({meta.totalModels}{" "}
+              models)
             </div>
             <div className="flex gap-2">
               <Button
                 variant="outline"
                 size="sm"
                 onClick={handlePrevPage}
-                disabled={pagination.page <= 1 || loading}
+                disabled={page <= 1 || loading}
               >
                 Previous
               </Button>
               <div className="flex items-center text-sm font-medium">
-                Page {pagination.page} of {pagination.totalPages}
+                Page {page} of {meta.totalPages}
               </div>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={handleNextPage}
-                disabled={pagination.page >= pagination.totalPages || loading}
+                disabled={page >= meta.totalPages || loading}
               >
                 Next
               </Button>
