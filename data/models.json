@@ -1332,5 +1332,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769936682/mini-vault/ryihdqvxzahoseoaupkz.jpg"
     ]
+  },
+  {
+    "id": "d0da7545-450c-408c-a9be-d0a12e412e60",
+    "createdAt": "2026-02-01T09:06:17.314Z",
+    "name": "Tantalus",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Vehicle",
+      "Print"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769936776/mini-vault/ygw38rncy0spuhssxlsd.jpg"
+    ]
   }
 ]
