@@ -1181,5 +1181,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769935805/mini-vault/vtfhrnguryohq0eqzcr6.jpg"
     ]
+  },
+  {
+    "id": "d5579a1d-53fd-4623-83af-2fc313acfb0f",
+    "createdAt": "2026-02-01T08:51:08.691Z",
+    "name": "Archon",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "HQ",
+      "Print"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769935867/mini-vault/s7eoukuqwycfh5fpapy9.jpg"
+    ]
   }
 ]
