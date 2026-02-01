@@ -2670,5 +2670,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769958151/mini-vault/c2wmsi5sfe7r64dy5sg4.jpg"
     ]
+  },
+  {
+    "id": "06334b0c-415a-4566-a4e0-08f05de6de39",
+    "createdAt": "2026-02-01T15:03:49.546Z",
+    "name": "Dark Elf Warrior Queen ",
+    "system": "OPR:AOF",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Resin",
+      "HQ"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769958228/mini-vault/i1usgfsgs8olqpesjbth.jpg"
+    ]
   }
 ]
