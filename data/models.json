@@ -3228,5 +3228,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769967949/mini-vault/ikug9det1q1czsvvuccg.jpg"
     ]
+  },
+  {
+    "id": "5b0a3fd4-98ff-4746-acff-7c7d706e00e6",
+    "createdAt": "2026-02-01T17:46:58.386Z",
+    "name": "Rin",
+    "system": "Relic Knights ",
+    "faction": "RK",
+    "manufacturer": "Cool Mini or Not",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769968017/mini-vault/ijvpi0jmih63qq9ev31h.jpg"
+    ]
   }
 ]
