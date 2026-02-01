@@ -51,7 +51,7 @@
       "Plastic Crack",
       "Gift"
     ],
-    "count": 1,
+    "count": 12,
     "painted": true,
     "assembled": true,
     "primed": true,
@@ -59,7 +59,8 @@
     "notes": "",
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769881714/mini-vault/u1vs5rakzljefa0zy3wx.jpg"
-    ]
+    ],
+    "forSale": false
   },
   {
     "id": "43f8c57c-906e-49f7-ba74-882b65c2a675",
