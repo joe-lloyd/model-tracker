@@ -1160,5 +1160,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769934996/mini-vault/fed3trzigxys1cixgzna.jpg"
     ]
+  },
+  {
+    "id": "d2cdda5c-a9b6-420f-b5d0-c7aa2ae72909",
+    "createdAt": "2026-02-01T08:50:07.220Z",
+    "name": "Nightmares",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Resin"
+    ],
+    "count": 5,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769935805/mini-vault/vtfhrnguryohq0eqzcr6.jpg"
+    ]
   }
 ]
