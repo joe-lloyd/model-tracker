@@ -3164,5 +3164,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769967128/mini-vault/mry9oj00rvhcdv9o4sfb.jpg"
     ]
+  },
+  {
+    "id": "5e97ce0b-8325-4567-acc5-35ecf44861c7",
+    "createdAt": "2026-02-01T17:33:38.417Z",
+    "name": "Goblin Drill Waggon",
+    "system": "Kings of War",
+    "faction": "Goblins",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Vehicle",
+      "Resin"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769967216/mini-vault/yx0ip4ax8s4mk56mdc4r.jpg"
+    ]
   }
 ]
