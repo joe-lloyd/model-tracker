@@ -2180,5 +2180,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769946875/mini-vault/kycia1zd1n29fojm8qzt.jpg"
     ]
+  },
+  {
+    "id": "7a0cb218-f50a-4c70-8cd5-b733065f33ef",
+    "createdAt": "2026-02-01T13:52:47.873Z",
+    "name": "Human warrior nuns ",
+    "system": "Kings of War",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin",
+      "Battleline"
+    ],
+    "count": 5,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769953965/mini-vault/h1j0cpocfbww1viezv82.jpg"
+    ]
   }
 ]
