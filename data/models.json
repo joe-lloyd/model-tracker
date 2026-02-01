@@ -1674,5 +1674,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769938734/mini-vault/vlalwi4a4ycybjfkt6yo.jpg"
     ]
+  },
+  {
+    "id": "d2008833-ab79-4258-a839-f8e3b9d3620b",
+    "createdAt": "2026-02-01T11:03:45.736Z",
+    "name": "Old one eye",
+    "system": "Warhammer 40,000",
+    "faction": "Tyranids",
+    "manufacturer": "Games Workshop",
+    "tags": [
+      "Monster"
+    ],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": true,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769943824/mini-vault/f0vbtgcd5pqjlohsggyi.jpg"
+    ]
   }
 ]
