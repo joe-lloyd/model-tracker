@@ -1138,5 +1138,27 @@
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769897085/mini-vault/yphsbuqdyzqlbsoorxgf.jpg"
     ],
     "forSale": true
+  },
+  {
+    "id": "6071f101-c959-4c3b-bb89-32424d4b52a6",
+    "createdAt": "2026-02-01T08:36:38.039Z",
+    "name": "Archon",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "HQ",
+      "Resin"
+    ],
+    "count": 1,
+    "painted": true,
+    "assembled": true,
+    "primed": true,
+    "based": true,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769934996/mini-vault/fed3trzigxys1cixgzna.jpg"
+    ]
   }
 ]
