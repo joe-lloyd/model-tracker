@@ -1458,5 +1458,27 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937810/mini-vault/gjsdoupzutiajmpvbzpe.jpg"
     ]
+  },
+  {
+    "id": "3df22b6c-087d-446d-ad3d-5e98f8932ff2",
+    "createdAt": "2026-02-01T09:26:03.788Z",
+    "name": "Gene Brutes",
+    "system": "OPR",
+    "faction": "Dark Elves",
+    "manufacturer": "Raging Heroes",
+    "tags": [
+      "Monster",
+      "Print"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769937962/mini-vault/rzercinnmxreewyvaork.jpg"
+    ]
   }
 ]
