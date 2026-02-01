@@ -2436,5 +2436,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769955502/mini-vault/iepdvpcueiug2x9mmfa6.jpg"
     ]
+  },
+  {
+    "id": "8f8da231-ef41-4be8-a130-1cd09c049b84",
+    "createdAt": "2026-02-01T14:19:23.245Z",
+    "name": "Angel ",
+    "system": "Kings of War",
+    "faction": "Angels",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Resin"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": false,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1769955562/mini-vault/nl4j0kag2gqnerb9s7bs.jpg"
+    ]
   }
 ]
