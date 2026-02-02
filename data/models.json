@@ -3581,5 +3581,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770068813/mini-vault/i4qiay0gxmjmedrhwlic.jpg"
     ]
+  },
+  {
+    "id": "f8998c3a-c42e-48d7-b81f-b3d77d4397c7",
+    "createdAt": "2026-02-02T22:23:07.713Z",
+    "name": "Wargs",
+    "system": "Dungeon Saga",
+    "faction": "Goblins",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770070983/mini-vault/at3wquwmscjteremblnf.jpg"
+    ]
   }
 ]
