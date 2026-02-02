@@ -38,6 +38,55 @@ export function ModelForm({
   const [isCustomFaction, setIsCustomFaction] = useState(false);
   const [isCustomManufacturer, setIsCustomManufacturer] = useState(false);
 
+  // Dynamic Options State (Initialized with defaults)
+  const [availableSystems, setAvailableSystems] = useState<string[]>([
+    ...SYSTEMS,
+  ]);
+  const [availableFactions, setAvailableFactions] = useState<string[]>([
+    ...FACTIONS,
+  ]);
+  const [availableManufacturers, setAvailableManufacturers] = useState<
+    string[]
+  >([...MANUFACTURERS]);
+  const [availableTags, setAvailableTags] = useState<string[]>([...TAGS]);
+
+  // Fetch dynamic stats on mount
+  useEffect(() => {
+    async function fetchFacets() {
+      try {
+        const res = await fetch("/.netlify/functions/get-models?limit=0");
+        if (res.ok) {
+          const json = await res.json();
+          if (json.facets) {
+            setAvailableSystems((prev) =>
+              Array.from(
+                new Set([...prev, ...(json.facets.systems || [])]),
+              ).sort(),
+            );
+            setAvailableFactions((prev) =>
+              Array.from(
+                new Set([...prev, ...(json.facets.factions || [])]),
+              ).sort(),
+            );
+            setAvailableManufacturers((prev) =>
+              Array.from(
+                new Set([...prev, ...(json.facets.manufacturers || [])]),
+              ).sort(),
+            );
+            setAvailableTags((prev) =>
+              Array.from(
+                new Set([...prev, ...(json.facets.tags || [])]),
+              ).sort(),
+            );
+          }
+        }
+      } catch (e) {
+        console.error("Failed to fetch facets", e);
+      }
+    }
+    fetchFacets();
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -81,17 +130,19 @@ export function ModelForm({
       // Handle custom fields
       if (
         existingModel.system &&
-        !SYSTEMS.includes(existingModel.system as any)
+        !availableSystems.includes(existingModel.system as any)
       )
         setIsCustomSystem(true);
       if (
         existingModel.faction &&
-        !FACTIONS.includes(existingModel.faction as any)
+        !availableFactions.includes(existingModel.faction as any)
       )
         setIsCustomFaction(true);
       if (
         existingModel.manufacturer &&
-        !MANUFACTURERS.includes((existingModel.manufacturer || "") as any)
+        !availableManufacturers.includes(
+          (existingModel.manufacturer || "") as any,
+        )
       )
         setIsCustomManufacturer(true);
     } else if (!isEdit) {
@@ -105,13 +156,13 @@ export function ModelForm({
               setValue(key as any, parsed[key]);
             }
           });
-          if (parsed.system && !SYSTEMS.includes(parsed.system))
+          if (parsed.system && !availableSystems.includes(parsed.system))
             setIsCustomSystem(true);
-          if (parsed.faction && !FACTIONS.includes(parsed.faction))
+          if (parsed.faction && !availableFactions.includes(parsed.faction))
             setIsCustomFaction(true);
           if (
             parsed.manufacturer &&
-            !MANUFACTURERS.includes(parsed.manufacturer)
+            !availableManufacturers.includes(parsed.manufacturer)
           )
             setIsCustomManufacturer(true);
         } catch (e) {
@@ -119,7 +170,14 @@ export function ModelForm({
         }
       }
     }
-  }, [isEdit, existingModel, setValue]);
+  }, [
+    isEdit,
+    existingModel,
+    setValue,
+    availableSystems,
+    availableFactions,
+    availableManufacturers,
+  ]);
 
   useEffect(() => {
     // 2. Save data on change (only for new forms to prevent overwriting draft with edit data)
@@ -292,7 +350,9 @@ export function ModelForm({
           {!isCustomSystem ? (
             <select
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-              value={SYSTEMS.includes(systemValue as any) ? systemValue : ""}
+              value={
+                availableSystems.includes(systemValue as any) ? systemValue : ""
+              }
               onChange={(e) => {
                 if (e.target.value === "__OTHER__") {
                   setIsCustomSystem(true);
@@ -305,7 +365,7 @@ export function ModelForm({
               <option value="" disabled>
                 Select System...
               </option>
-              {SYSTEMS.map((s) => (
+              {availableSystems.map((s) => (
                 <option key={s} value={s}>
                   {s}
                 </option>
@@ -341,7 +401,11 @@ export function ModelForm({
           {!isCustomFaction ? (
             <select
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-              value={FACTIONS.includes(factionValue as any) ? factionValue : ""}
+              value={
+                availableFactions.includes(factionValue as any)
+                  ? factionValue
+                  : ""
+              }
               onChange={(e) => {
                 if (e.target.value === "__OTHER__") {
                   setIsCustomFaction(true);
@@ -354,7 +418,7 @@ export function ModelForm({
               <option value="" disabled>
                 Select Faction...
               </option>
-              {FACTIONS.map((f) => (
+              {availableFactions.map((f) => (
                 <option key={f} value={f}>
                   {f}
                 </option>
@@ -392,7 +456,7 @@ export function ModelForm({
           <select
             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             value={
-              MANUFACTURERS.includes(manufacturerValue as any)
+              availableManufacturers.includes(manufacturerValue as any)
                 ? manufacturerValue
                 : ""
             }
@@ -408,7 +472,7 @@ export function ModelForm({
             <option value="" disabled>
               Select Manufacturer...
             </option>
-            {MANUFACTURERS.map((m) => (
+            {availableManufacturers.map((m) => (
               <option key={m} value={m}>
                 {m}
               </option>
@@ -565,7 +629,7 @@ export function ModelForm({
                     Suggestions:
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {TAGS.map((tag) => {
+                    {availableTags.map((tag) => {
                       const isSelected = currentTags.includes(tag);
                       if (isSelected) return null; // Already shown above
                       return (

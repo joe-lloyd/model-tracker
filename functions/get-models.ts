@@ -112,6 +112,13 @@ export const handler: Handler = async (event: HandlerEvent) => {
     const uniqueFactions = Array.from(
       new Set(models.map((m: any) => m.faction).filter(Boolean)),
     ).sort();
+    const uniqueManufacturers = Array.from(
+      new Set(models.map((m: any) => m.manufacturer).filter(Boolean)),
+    ).sort();
+
+    // Flatten all tags and get unique values
+    const allTags = models.flatMap((m: any) => m.tags || []);
+    const uniqueTags = Array.from(new Set(allTags.filter(Boolean))).sort();
 
     return {
       statusCode: 200,
@@ -131,6 +138,8 @@ export const handler: Handler = async (event: HandlerEvent) => {
         facets: {
           systems: uniqueSystems,
           factions: uniqueFactions,
+          manufacturers: uniqueManufacturers,
+          tags: uniqueTags,
         },
       }),
     };
