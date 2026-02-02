@@ -3638,5 +3638,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770071095/mini-vault/dxsrqfvder9a4kndozf6.jpg"
     ]
+  },
+  {
+    "id": "8d2c2a76-3af5-43fe-947f-c4b0d8b43328",
+    "createdAt": "2026-02-02T22:25:42.292Z",
+    "name": "Wraith ",
+    "system": "Dungeon Saga",
+    "faction": "Undead",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770071139/mini-vault/q6nooqdnnejwqhtwkqcx.jpg"
+    ]
   }
 ]
