@@ -3497,5 +3497,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770068467/mini-vault/vrjhjsro3uobnea0gnal.jpg"
     ]
+  },
+  {
+    "id": "ca6d45c6-87ec-4e15-8630-b402af12fa3a",
+    "createdAt": "2026-02-02T21:42:14.514Z",
+    "name": "Skeleton Archer",
+    "system": "Dungeon Saga",
+    "faction": "Undead",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770068533/mini-vault/spsc1qvnnuj7gokmi4o5.jpg"
+    ]
   }
 ]
