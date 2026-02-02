@@ -3476,5 +3476,26 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770068368/mini-vault/jpvhs5lb6uyxax9as79s.jpg"
     ]
+  },
+  {
+    "id": "d5492946-84f3-4e77-9b20-c080868cb8a4",
+    "createdAt": "2026-02-02T21:41:08.976Z",
+    "name": "Dwarf Warrior ",
+    "system": "Dungeon Saga",
+    "faction": "Dwarf",
+    "manufacturer": "Mantic",
+    "tags": [
+      "Plastic Crack"
+    ],
+    "count": 2,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770068467/mini-vault/vrjhjsro3uobnea0gnal.jpg"
+    ]
   }
 ]
