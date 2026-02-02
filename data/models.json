@@ -3600,5 +3600,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770070983/mini-vault/at3wquwmscjteremblnf.jpg"
     ]
+  },
+  {
+    "id": "e19b1a72-819d-4697-963d-6ab1eec7ae07",
+    "createdAt": "2026-02-02T22:24:01.154Z",
+    "name": "Goblin Archers ",
+    "system": "Dungeon Saga",
+    "faction": "Goblins",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 3,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770071037/mini-vault/apdrao4xfgyruh1jokiu.jpg"
+    ]
   }
 ]
