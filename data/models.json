@@ -3849,5 +3849,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770243094/mini-vault/rtdbcdqiersd3xqw5wgu.jpg"
     ]
+  },
+  {
+    "id": "8b2328bf-6e46-4fd8-8bbd-876b62fd0119",
+    "createdAt": "2026-02-04T22:12:39.655Z",
+    "name": "Elven archer",
+    "system": "Dungeon Saga ",
+    "faction": "Elves",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770243158/mini-vault/knhrs43hx2prhj6ti64w.jpg"
+    ]
   }
 ]
