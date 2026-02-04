@@ -3830,5 +3830,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770243055/mini-vault/v6qhfzmooqj24ldv62ys.jpg"
     ]
+  },
+  {
+    "id": "ad598016-46e6-4760-b6d3-a923d963ee1b",
+    "createdAt": "2026-02-04T22:11:35.596Z",
+    "name": "Human Cleric ",
+    "system": "Dungeon Saga ",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770243094/mini-vault/rtdbcdqiersd3xqw5wgu.jpg"
+    ]
   }
 ]
