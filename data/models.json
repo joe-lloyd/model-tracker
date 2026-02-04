@@ -3716,5 +3716,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770242424/mini-vault/fu37izb8me8cfpmta7vz.jpg"
     ]
+  },
+  {
+    "id": "53af6d1b-b1a1-4d65-afc0-94e1ba36d95a",
+    "createdAt": "2026-02-04T22:02:55.533Z",
+    "name": "Chaos Dwarfs ",
+    "system": "Dungeon Saga",
+    "faction": "Dwarf",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770242574/mini-vault/bhvhsz9uzmjvqcejv6ns.jpg"
+    ]
   }
 ]
