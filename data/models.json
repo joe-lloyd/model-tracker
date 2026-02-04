@@ -3792,5 +3792,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770242935/mini-vault/gp2ngloog75m8wj44gfv.jpg"
     ]
+  },
+  {
+    "id": "f338099c-207d-4e17-8675-f91cd2360a0d",
+    "createdAt": "2026-02-04T22:10:18.670Z",
+    "name": "Human paladin ",
+    "system": "Dungeon Saga ",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770243015/mini-vault/odhpqnrucdtdyilezum4.jpg"
+    ]
   }
 ]
