@@ -3963,5 +3963,24 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1770243387/mini-vault/k0ykxnfuprzo8lufednq.jpg"
     ]
+  },
+  {
+    "id": "08b748f3-572e-4ce3-8b86-3c6f193a17b7",
+    "createdAt": "2026-02-04T22:17:15.544Z",
+    "name": "Human Barbarian ",
+    "system": "Dungeon Saga",
+    "faction": "Human",
+    "manufacturer": "Mantic",
+    "tags": [],
+    "count": 1,
+    "painted": false,
+    "assembled": true,
+    "primed": false,
+    "based": false,
+    "forSale": false,
+    "notes": "",
+    "images": [
+      "https://res.cloudinary.com/dtapbudyz/image/upload/v1770243433/mini-vault/jz5oyoomd6elyk8jisx0.jpg"
+    ]
   }
 ]
