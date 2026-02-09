@@ -818,7 +818,9 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769893954/mini-vault/rmsjqztb1tpfnqygmgni.jpg"
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 18,
+    "sellPrice": 9
   },
   {
     "id": "06d75635-6b4f-4b0d-a745-c2778fe4b29e",
@@ -1052,7 +1054,9 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769895882/mini-vault/lsnx61qanulp7l931isy.jpg"
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 2,
+    "sellPrice": 1
   },
   {
     "id": "c57409b3-d995-4446-9d3f-31c61a01b59e",
@@ -1138,7 +1142,9 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769897085/mini-vault/yphsbuqdyzqlbsoorxgf.jpg"
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 2,
+    "sellPrice": 1
   },
   {
     "id": "6071f101-c959-4c3b-bb89-32424d4b52a6",

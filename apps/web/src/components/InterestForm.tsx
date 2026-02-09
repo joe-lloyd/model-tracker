@@ -30,7 +30,7 @@ export function InterestForm({
     try {
       await fetch("/", {
         method: "POST",
-        header: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
       setSubmitted(true);
