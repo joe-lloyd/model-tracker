@@ -1140,7 +1140,9 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769897085/mini-vault/yphsbuqdyzqlbsoorxgf.jpg"
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 2,
+    "sellPrice": 1
   },
   {
     "id": "6071f101-c959-4c3b-bb89-32424d4b52a6",
