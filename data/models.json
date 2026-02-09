@@ -834,7 +834,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 2,
+    "sellPrice": 1
   },
   {
     "id": "914d1d47-6813-4931-b470-152fc67ddfa6",
@@ -857,7 +859,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 2,
+    "sellPrice": 1.8
   },
   {
     "id": "e9371a6c-f846-41b1-ab49-02f087c1bc2f",
@@ -949,7 +953,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 2,
+    "sellPrice": 1
   },
   {
     "id": "692c93e0-7cc5-411b-bda6-36b3e37c3d98",
@@ -972,7 +978,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 40,
+    "sellPrice": 20
   },
   {
     "id": "6b78dc53-13cf-4260-9201-d9245a483be2",
@@ -995,7 +1003,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 40,
+    "sellPrice": 20
   },
   {
     "id": "4998e630-8811-4c34-8b23-f05e24170511",
@@ -1018,7 +1028,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 7,
+    "sellPrice": 6.3
   },
   {
     "id": "be2697de-98ec-42bf-9895-b67168b5c486",
@@ -1041,7 +1053,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 7,
+    "sellPrice": 6.3
   },
   {
     "id": "5c5c8716-9755-4a60-838d-861946f97568",
@@ -1064,7 +1078,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 10,
+    "sellPrice": 5
   },
   {
     "id": "786ea331-49b2-406d-9912-c2d7c80a9db6",
@@ -1087,7 +1103,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 8,
+    "sellPrice": 4
   },
   {
     "id": "f28e1d25-f9d7-4670-a767-389d2a1a76d1",
@@ -1182,7 +1200,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 15,
+    "sellPrice": 7.5
   },
   {
     "id": "e298b9b8-6d88-4872-ab90-3d325d2dd2f2",
@@ -1205,7 +1225,9 @@
         "height": 3000
       }
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 6,
+    "sellPrice": 3
   },
   {
     "id": "5bea677d-c86c-452b-bbb7-f4d182492ea1",
