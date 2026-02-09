@@ -1117,7 +1117,9 @@
     "images": [
       "https://res.cloudinary.com/dtapbudyz/image/upload/v1769896404/mini-vault/ncad8tuj7wnsob2xaztb.jpg"
     ],
-    "forSale": true
+    "forSale": true,
+    "retailPrice": 15,
+    "sellPrice": 7.5
   },
   {
     "id": "e298b9b8-6d88-4872-ab90-3d325d2dd2f2",
