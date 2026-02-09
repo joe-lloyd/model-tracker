@@ -9,5 +9,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Hidden form for Netlify detection -->
+    <form name="interest" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <!-- Hidden model list field if we decide to use it, or just rely on message -->
+    </form>
   </body>
 </html>
