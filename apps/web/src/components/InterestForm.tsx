@@ -5,7 +5,7 @@ import { Loader2, Send } from "lucide-react";
 export interface InterestModel {
   name: string;
   price?: number;
-  image?: string;
+  image?: string | { url: string };
   count?: number;
 }
 
@@ -98,7 +98,11 @@ export function InterestForm({
                 <div className="h-12 w-12 flex-shrink-0 bg-muted rounded overflow-hidden border">
                   {model.image ? (
                     <img
-                      src={model.image}
+                      src={
+                        typeof model.image === "string"
+                          ? model.image
+                          : model.image.url
+                      }
                       alt={model.name}
                       className="h-full w-full object-cover"
                     />

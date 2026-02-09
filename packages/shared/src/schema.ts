@@ -19,7 +19,18 @@ export const ModelSchema = z.object({
   sellPrice: z.number().optional(),
 
   notes: z.string().optional(),
-  images: z.array(z.string()).default([]),
+  images: z
+    .array(
+      z.union([
+        z.string(),
+        z.object({
+          url: z.string(),
+          width: z.number().optional(),
+          height: z.number().optional(),
+        }),
+      ]),
+    )
+    .default([]),
 
   createdAt: z.string().datetime(),
 });

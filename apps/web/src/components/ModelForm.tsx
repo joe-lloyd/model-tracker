@@ -194,16 +194,19 @@ export function ModelForm({
   const manufacturerValue = watch("manufacturer");
 
   const [vaultKey, setVaultKey] = useState("");
-  const [isLocked, setIsLocked] = useState(true);
+  // isLocked removed as we redirect now
 
-  // Load key from storage on mount
+  // Redirect if locked
   useEffect(() => {
-    const savedKey = localStorage.getItem("mini-vault-key");
-    if (savedKey) {
-      setVaultKey(savedKey);
-      setIsLocked(false);
+    // Check key
+    const key = localStorage.getItem("mini-vault-key");
+    if (!key) {
+      // If try to access form without key, redirect to admin
+      navigate("/admin", { replace: true });
+    } else {
+      setVaultKey(key);
     }
-  }, []);
+  }, [navigate]);
 
   // Auto-calculate Sell Price
   const retailPrice = watch("retailPrice");
@@ -225,25 +228,23 @@ export function ModelForm({
     }
   }, [retailPrice, isPainted, isAssembled, forSale, setValue]);
 
-  const handleUnlock = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (vaultKey.trim()) {
-      localStorage.setItem("mini-vault-key", vaultKey.trim());
-      setIsLocked(false);
-    }
-  };
-
   const onSubmit = async (data: ModelInput) => {
     setIsSubmitting(true);
     try {
       // 1. Upload Images
       const uploadPromises = formFiles.map((file) => uploadToCloudinary(file));
       const uploadResults = await Promise.all(uploadPromises);
-      const newImageUrls = uploadResults.map((r) => r.secure_url);
+
+      // Store images as objects with dimensions
+      const newImages = uploadResults.map((r) => ({
+        url: r.secure_url,
+        width: r.width,
+        height: r.height,
+      }));
 
       const finalData: any = {
         ...data,
-        images: [...(data.images || []), ...newImageUrls], // Append new images to existing
+        images: [...(data.images || []), ...newImages], // Append new images to existing
       };
 
       // Ensure we pass ID if editing
@@ -274,7 +275,8 @@ export function ModelForm({
         let errorMessage = "Failed to save model";
         if (response.status === 401) {
           errorMessage = "Unauthorized! Check your Vault Key.";
-          setIsLocked(true);
+          // setIsLocked(true); // Redundant if we redirect, or we can redirect here
+          navigate("/admin");
         } else if (result && result.error) {
           errorMessage =
             typeof result.error === "string"
@@ -298,7 +300,15 @@ export function ModelForm({
       }
 
       if (onSuccess) onSuccess();
-      else navigate("/"); // Default back to home
+      else {
+        // Navigate back to where we came from, or home
+        const from = (location.state as any)?.from;
+        if (from) {
+          navigate(from);
+        } else {
+          navigate("/"); // Default back to home
+        }
+      }
     } catch (error: any) {
       console.error(error);
       alert(`Submission failed: ${error.message}`);
@@ -306,27 +316,6 @@ export function ModelForm({
       setIsSubmitting(false);
     }
   };
-
-  if (isLocked) {
-    return (
-      <div className="flex flex-col items-center justify-center p-8 space-y-4 max-w-md mx-auto mt-10 border rounded-lg shadow-sm">
-        <h2 className="text-xl font-bold">🔐 Vault Access</h2>
-        <p className="text-sm text-muted-foreground text-center">
-          Enter your secret key to enable {isEdit ? "editing" : "adding"}{" "}
-          models.
-        </p>
-        <form onSubmit={handleUnlock} className="flex flex-col gap-4 w-full">
-          <Input
-            type="password"
-            placeholder="Enter Vault Key..."
-            value={vaultKey}
-            onChange={(e) => setVaultKey(e.target.value)}
-          />
-          <Button type="submit">Unlock Vault</Button>
-        </form>
-      </div>
-    );
-  }
 
   // If editing but no model data found (e.g. direct URL visit without state),
   // we should ideally fetch it. For now, show a helpful message.
@@ -713,7 +702,7 @@ export function ModelForm({
             {existingModel.images.map((img, i) => (
               <img
                 key={i}
-                src={img}
+                src={typeof img === "string" ? img : img.url}
                 className="rounded-md w-full h-20 object-cover border"
               />
             ))}

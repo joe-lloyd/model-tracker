@@ -7,11 +7,32 @@ import {
 } from "react-router-dom";
 import { ModelForm } from "@/components/ModelForm";
 import { ModelList } from "@/components/ModelList";
+import { AdminPage } from "@/components/AdminPage";
+import { ModelDetail } from "@/components/ModelDetail";
+import { useEffect, useState } from "react";
 
 function Layout() {
   const location = useLocation();
   const isListView = location.pathname === "/" || location.pathname === "/sell";
   const isSellPage = location.pathname === "/sell";
+
+  // Check unlock status for header buttons
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  useEffect(() => {
+    // Basic check, could be improved with context or event listener for immediate updates
+    const checkUnlock = () => {
+      setIsUnlocked(!!localStorage.getItem("mini-vault-key"));
+    };
+    checkUnlock();
+    // Poll or listen for storage events to update UI when admin unlocks
+    window.addEventListener("storage", checkUnlock);
+    // Also set interval for polling as storage event only fires across tabs usually
+    const interval = setInterval(checkUnlock, 1000);
+    return () => {
+      window.removeEventListener("storage", checkUnlock);
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-start bg-background p-4 pt-4 md:pt-10">
@@ -36,18 +57,21 @@ function Layout() {
             </Link>
 
             {isListView ? (
-              <Link
-                to="/add"
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2"
-              >
-                + Add New
-              </Link>
+              isUnlocked ? (
+                <Link
+                  to="/add"
+                  state={{ from: location }} // Pass location to preserve state on return? Handled in ModelList mostly
+                  className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2"
+                >
+                  + Add New
+                </Link>
+              ) : null
             ) : (
               <Link
-                to="/"
+                to="/" // This should ideally be "back"
                 className="text-sm font-medium text-muted-foreground hover:text-primary"
               >
-                Cancel
+                Back
               </Link>
             )}
           </div>
@@ -57,6 +81,8 @@ function Layout() {
           <Routes>
             <Route path="/" element={<ModelList />} />
             <Route path="/sell" element={<ModelList onlyForSale />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/model/:id" element={<ModelDetail />} />
             <Route
               path="/add"
               element={

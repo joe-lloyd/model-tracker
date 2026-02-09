@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { type Model } from "@mini-vault/shared";
-import { Loader2, Plus, Search, Tags, ShoppingCart, X } from "lucide-react";
+import {
+  Loader2,
+  Plus,
+  Search,
+  Tags,
+  ShoppingCart,
+  X,
+  Edit,
+} from "lucide-react";
 import { Button } from "./ui";
 import { Link, useSearchParams } from "react-router-dom";
 import { InterestForm } from "./InterestForm";
@@ -46,6 +54,11 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
   const [localSearch, setLocalSearch] = useState(search);
   const [debouncedSearch, setDebouncedSearch] = useState(search);
 
+  // Admin unlock state
+  const [isUnlocked, setIsUnlocked] = useState(
+    !!localStorage.getItem("mini-vault-key"),
+  );
+
   /* -------------------------------------------------------------------------
    * Effects
    * ----------------------------------------------------------------------- */
@@ -70,6 +83,26 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
   useEffect(() => {
     setLocalSearch(search);
   }, [search]);
+
+  // Restore scroll position if available
+  useEffect(() => {
+    const savedScroll = sessionStorage.getItem("modelListScrollY");
+    if (savedScroll) {
+      // Timeout to ensure content is rendered?
+      // If data is fetching, we might not be able to scroll yet.
+      // We should perhaps do this after data fetch?
+      // But if data comes from cache or is fast...
+      // Actually correct place is after data is set.
+    }
+  }, []);
+
+  // Check unlock status on mount/focus
+  useEffect(() => {
+    const check = () => setIsUnlocked(!!localStorage.getItem("mini-vault-key"));
+    check();
+    window.addEventListener("focus", check);
+    return () => window.removeEventListener("focus", check);
+  }, []);
 
   // Fetch Data
   useEffect(() => {
@@ -113,7 +146,6 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
       }
     }
 
-    fetchModels();
     fetchModels();
   }, [debouncedSearch, statusFilter, systemFilter, factionFilter, page, limit]); // Refetch on these changes
 
@@ -271,7 +303,7 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
             <option value="painted">🎨 Painted</option>
             <option value="assembled">🛠️ Assembled</option>
             <option value="primed">🌑 Primed</option>
-            <option value="based">uD83CuDF3F Based</option>
+            <option value="based">🌳 Based</option>
             <option value="forSale">💰 For Sale</option>
           </select>
 
@@ -324,37 +356,57 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
             {data.map((model) => (
               <div
                 key={model.id}
-                className="break-inside-avoid mb-4 group relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow"
+                className="break-inside-avoid-column bg-card rounded-lg border shadow-sm overflow-hidden"
               >
-                {/* Image Link */}
-                <Link to={`/edit/${model.id}`} state={{ model }}>
-                  {/* Image - Native Aspect Ratio */}
+                <Link
+                  to={`/model/${model.id}`}
+                  state={{
+                    model,
+                    from: location.pathname + location.search,
+                  }}
+                  onClick={() => {
+                    sessionStorage.setItem(
+                      "modelListScrollY",
+                      window.scrollY.toString(),
+                    );
+                  }}
+                >
                   <div className="w-full relative bg-muted/20 cursor-pointer">
                     {model.images && model.images.length > 0 ? (
                       <img
-                        src={model.images[0]}
+                        src={
+                          typeof model.images[0] === "string"
+                            ? model.images[0]
+                            : (model.images[0] as any).url
+                        }
                         alt={model.name}
-                        className="w-full h-auto block transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-auto block bg-muted"
                         loading="lazy"
+                        style={
+                          typeof model.images[0] !== "string" &&
+                          (model.images[0] as any).width &&
+                          (model.images[0] as any).height
+                            ? {
+                                aspectRatio: `${(model.images[0] as any).width} / ${(model.images[0] as any).height}`,
+                              }
+                            : undefined
+                        }
                       />
                     ) : (
-                      <div className="flex h-32 items-center justify-center text-muted-foreground bg-muted/50">
+                      <div className="h-32 flex items-center justify-center bg-muted/50 text-muted-foreground">
                         No Image
                       </div>
                     )}
 
-                    {/* Count Badge */}
                     {model.count > 1 && (
-                      <span className="absolute top-2 right-2 bg-black/75 text-white text-xs font-bold px-2 py-1 rounded-full z-10">
+                      <span className="absolute top-2 right-2 bg-black/75 text-white text-xs font-bold px-2 py-1 rounded-full">
                         x{model.count}
                       </span>
                     )}
-
-                    {/* For Sale Badge */}
                     {model.forSale && (
-                      <span className="absolute top-2 left-2 bg-green-600/90 text-white text-xs font-bold px-2 py-1 rounded-full z-10 flex items-center gap-1">
+                      <span className="absolute top-2 left-2 bg-green-600/90 text-white text-xs font-bold px-2 py-1 rounded-full flex gap-1 items-center">
                         <Tags className="w-3 h-3" />
-                        {model.sellPrice && model.sellPrice > 0
+                        {model.sellPrice
                           ? `€${(model.sellPrice * model.count).toFixed(2)}`
                           : "$$$"}
                       </span>
@@ -363,17 +415,24 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
                 </Link>
 
                 <div className="p-4 space-y-2">
-                  <div className="flex justify-between items-start gap-2">
-                    <Link
-                      to={`/edit/${model.id}`}
-                      state={{ model }}
-                      className="hover:underline"
-                    >
-                      <h3 className="font-semibold tracking-tight leading-tight">
-                        {model.name}
-                      </h3>
-                    </Link>
-                  </div>
+                  <Link
+                    to={`/model/${model.id}`}
+                    state={{
+                      model,
+                      from: location.pathname + location.search,
+                    }}
+                    onClick={() => {
+                      sessionStorage.setItem(
+                        "modelListScrollY",
+                        window.scrollY.toString(),
+                      );
+                    }}
+                    className="hover:underline"
+                  >
+                    <h3 className="font-semibold tracking-tight leading-tight">
+                      {model.name}
+                    </h3>
+                  </Link>
 
                   <div className="flex flex-wrap gap-1 text-xs text-muted-foreground">
                     <span className="bg-muted px-1.5 py-0.5 rounded">
@@ -385,7 +444,7 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
                   </div>
 
                   {/* Status Indicators */}
-                  <div className="flex justify-between items-center pt-2">
+                  <div className="flex justify-between items-center pt-2 gap-2">
                     <div className="flex gap-1">
                       {model.painted && (
                         <div
@@ -407,21 +466,35 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
                       )}
                     </div>
 
-                    {model.forSale && (
-                      <Button
-                        size="sm"
-                        variant="ghost"
-                        className="h-6 px-2 text-green-700 hover:text-green-800 hover:bg-green-100"
-                        onClick={(e) => {
-                          e.preventDefault(); // Prevent navigation
-                          setSelectedInterestModel(model);
-                          setShowInterestForm(true);
-                        }}
-                      >
-                        <ShoppingCart className="w-3 h-3 mr-1" />
-                        Buy
-                      </Button>
-                    )}
+                    <div className="flex gap-2 items-center">
+                      {isUnlocked && (
+                        <Link
+                          to={`/edit/${model.id}`}
+                          state={{
+                            model,
+                            from: location.pathname + location.search,
+                          }}
+                          className="text-xs text-muted-foreground hover:text-foreground inline-flex items-center"
+                        >
+                          <Edit className="w-3 h-3 mr-1" />
+                          Edit
+                        </Link>
+                      )}
+                      {model.forSale && (
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-6 px-2 text-green-700 hover:text-green-800 hover:bg-green-100"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setSelectedInterestModel(model);
+                            setShowInterestForm(true);
+                          }}
+                        >
+                          <ShoppingCart className="w-3 h-3 mr-1" /> Buy
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
