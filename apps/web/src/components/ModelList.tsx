@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { type Model } from "@mini-vault/shared";
-import { Loader2, Plus, Search, Tags } from "lucide-react";
+import { Loader2, Plus, Search, Tags, ShoppingCart, X } from "lucide-react";
 import { Button } from "./ui";
 import { Link, useSearchParams } from "react-router-dom";
+import { InterestForm } from "./InterestForm";
 
 export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
   /* -------------------------------------------------------------------------
@@ -35,6 +36,11 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Interest Modal State
+  const [showInterestForm, setShowInterestForm] = useState(false);
+  const [selectedInterestModel, setSelectedInterestModel] =
+    useState<Model | null>(null);
 
   // local search state for input field (debounced sync to URL)
   const [localSearch, setLocalSearch] = useState(search);
@@ -99,9 +105,9 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
             setFacets(json.facets);
           }
         }
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error("Fetch error:", err);
-        setError(err.message || "Unknown error occurred");
+        setError(err instanceof Error ? err.message : "Unknown error occurred");
       } finally {
         setLoading(false);
       }
@@ -176,7 +182,41 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 relative">
+      {/* Interest Modal Overlay */}
+      {showInterestForm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 animate-in fade-in">
+          <div className="bg-background rounded-lg shadow-lg w-full max-w-lg relative animate-in zoom-in-95 duration-200">
+            <button
+              onClick={() => setShowInterestForm(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="p-6">
+              <InterestForm
+                onClose={() => {
+                  setShowInterestForm(false);
+                  setSelectedInterestModel(null);
+                }}
+                selectedModels={
+                  selectedInterestModel
+                    ? [
+                        {
+                          name: selectedInterestModel.name,
+                          price: selectedInterestModel.sellPrice,
+                          count: selectedInterestModel.count,
+                          image: selectedInterestModel.images?.[0],
+                        },
+                      ]
+                    : []
+                }
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Controls Bar */}
       <div className="flex flex-col sm:flex-row gap-4 justify-between items-center bg-card p-4 rounded-lg border shadow-sm">
         {/* Search */}
@@ -243,6 +283,17 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
               </Button>
             </Link>
           )}
+
+          {onlyForSale && (
+            <Button
+              size="sm"
+              onClick={() => setShowInterestForm(true)}
+              className="bg-green-600 hover:bg-green-700 text-white"
+            >
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              Buy / Contact
+            </Button>
+          )}
         </div>
       </div>
 
@@ -303,7 +354,9 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
                     {model.forSale && (
                       <span className="absolute top-2 left-2 bg-green-600/90 text-white text-xs font-bold px-2 py-1 rounded-full z-10 flex items-center gap-1">
                         <Tags className="w-3 h-3" />
-                        $$$
+                        {model.sellPrice && model.sellPrice > 0
+                          ? `€${(model.sellPrice * model.count).toFixed(2)}`
+                          : "$$$"}
                       </span>
                     )}
                   </div>
@@ -332,24 +385,42 @@ export function ModelList({ onlyForSale = false }: { onlyForSale?: boolean }) {
                   </div>
 
                   {/* Status Indicators */}
-                  <div className="flex gap-1 pt-2">
-                    {model.painted && (
-                      <div
-                        className="w-2 h-2 rounded-full bg-green-500"
-                        title="Painted"
-                      />
-                    )}
-                    {model.assembled && (
-                      <div
-                        className="w-2 h-2 rounded-full bg-blue-500"
-                        title="Assembled"
-                      />
-                    )}
-                    {model.primed && (
-                      <div
-                        className="w-2 h-2 rounded-full bg-gray-500"
-                        title="Primed"
-                      />
+                  <div className="flex justify-between items-center pt-2">
+                    <div className="flex gap-1">
+                      {model.painted && (
+                        <div
+                          className="w-2 h-2 rounded-full bg-green-500"
+                          title="Painted"
+                        />
+                      )}
+                      {model.assembled && (
+                        <div
+                          className="w-2 h-2 rounded-full bg-blue-500"
+                          title="Assembled"
+                        />
+                      )}
+                      {model.primed && (
+                        <div
+                          className="w-2 h-2 rounded-full bg-gray-500"
+                          title="Primed"
+                        />
+                      )}
+                    </div>
+
+                    {model.forSale && (
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        className="h-6 px-2 text-green-700 hover:text-green-800 hover:bg-green-100"
+                        onClick={(e) => {
+                          e.preventDefault(); // Prevent navigation
+                          setSelectedInterestModel(model);
+                          setShowInterestForm(true);
+                        }}
+                      >
+                        <ShoppingCart className="w-3 h-3 mr-1" />
+                        Buy
+                      </Button>
                     )}
                   </div>
                 </div>

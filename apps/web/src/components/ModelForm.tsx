@@ -205,6 +205,26 @@ export function ModelForm({
     }
   }, []);
 
+  // Auto-calculate Sell Price
+  const retailPrice = watch("retailPrice");
+  const isPainted = watch("painted");
+  const isAssembled = watch("assembled");
+  const forSale = watch("forSale");
+
+  useEffect(() => {
+    if (forSale && retailPrice && retailPrice > 0) {
+      // Logic: NOS (Not Assembled & Not Painted) = 90%, otherwise 50%
+      const isNOS = !isAssembled && !isPainted;
+      const percentage = isNOS ? 0.9 : 0.5;
+      const calculated = Math.round(retailPrice * percentage * 100) / 100;
+
+      // Only update if value is different to avoid loops,
+      // and maybe only if the user hasn't manually overridden it?
+      // For now, let's just forcefuly update it to keep it simple and consistent.
+      setValue("sellPrice", calculated, { shouldValidate: true });
+    }
+  }, [retailPrice, isPainted, isAssembled, forSale, setValue]);
+
   const handleUnlock = (e: React.FormEvent) => {
     e.preventDefault();
     if (vaultKey.trim()) {
@@ -551,7 +571,8 @@ export function ModelForm({
       </div>
 
       {/* For Sale Toggle */}
-      <div className="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-900">
+      {/* For Sale Toggle & Prices */}
+      <div className="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-900 space-y-4">
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
@@ -567,6 +588,39 @@ export function ModelForm({
             </span>
           </div>
         </label>
+
+        {watch("forSale") && (
+          <div className="grid grid-cols-2 gap-4 pt-2 animate-in fade-in slide-in-from-top-2">
+            <div className="space-y-2">
+              <Label htmlFor="retailPrice">Retail Price (Per Model)</Label>
+              <Input
+                id="retailPrice"
+                type="number"
+                step="0.01"
+                placeholder="0.00"
+                {...register("retailPrice", { valueAsNumber: true })}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="sellPrice">Sell Price (Per Model)</Label>
+              <Input
+                id="sellPrice"
+                type="number"
+                step="0.01"
+                placeholder="Auto-calculated"
+                {...register("sellPrice", { valueAsNumber: true })}
+              />
+              <p className="text-[10px] text-muted-foreground opacity-80">
+                Auto-calc: 90% (NOS) or 50% (Built/Painted)
+              </p>
+            </div>
+            {/* Total Value Preview */}
+            <div className="col-span-2 text-right text-sm text-muted-foreground font-medium">
+              Total Lot Value: €
+              {((watch("sellPrice") || 0) * (watch("count") || 1)).toFixed(2)}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Tags */}

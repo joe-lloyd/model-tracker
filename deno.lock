@@ -12,6 +12,7 @@
     "packageJson": {
       "dependencies": [
         "npm:@netlify/functions@^5.1.2",
+        "npm:netlify-cli@^23.14.0",
         "npm:octokit@^5.0.5",
         "npm:prettier@latest",
         "npm:turbo@latest"

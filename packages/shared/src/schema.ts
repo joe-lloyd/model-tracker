@@ -15,6 +15,8 @@ export const ModelSchema = z.object({
   primed: z.boolean().default(false),
   based: z.boolean().default(false),
   forSale: z.boolean().default(false),
+  retailPrice: z.number().optional(),
+  sellPrice: z.number().optional(),
 
   notes: z.string().optional(),
   images: z.array(z.string()).default([]),
