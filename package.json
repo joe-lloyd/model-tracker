@@ -20,6 +20,7 @@
   "packageManager": "pnpm@9.0.0",
   "dependencies": {
     "@netlify/functions": "^5.1.2",
-    "octokit": "^5.0.5"
+    "octokit": "^5.0.5",
+    "sharp": "^0.34.5"
   }
 }

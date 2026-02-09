@@ -14,6 +14,9 @@ importers:
       octokit:
         specifier: ^5.0.5
         version: 5.0.5
+      sharp:
+        specifier: ^0.34.5
+        version: 0.34.5
     devDependencies:
       netlify-cli:
         specifier: ^23.14.0
